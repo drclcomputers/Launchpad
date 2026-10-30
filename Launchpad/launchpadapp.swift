@@ -34,6 +34,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
 		w.contentView = NSHostingView(rootView: LaunchpadView())
 		w.makeKeyAndOrderFront(nil)
 		NSApp.activate(ignoringOtherApps: true)
+		NSApp.presentationOptions = [.hideDock, .hideMenuBar]
 		window = w
 	}
 

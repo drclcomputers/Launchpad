@@ -7,6 +7,17 @@
 
 import SwiftUI
 
+
+private struct DismissKey: EnvironmentKey {
+	static let defaultValue: () -> Void = { NSApp.terminate(nil) }
+}
+extension EnvironmentValues {
+	var dismissLaunchpad: () -> Void {
+		get { self[DismissKey.self] }
+		set { self[DismissKey.self] = newValue }
+	}
+}
+
 struct VisualEffect: NSViewRepresentable {
 	func makeNSView(context: Context) -> NSVisualEffectView {
 		let v = NSVisualEffectView()
@@ -25,15 +36,21 @@ struct LaunchpadView: View {
 	@State private var drag: CGFloat = 0
 	@State private var scroll = ScrollState()
 	@State private var monitorsInstalled = false
+	@State private var appeared = false
+	@State private var hidden: Set<String> =
+		Set(UserDefaults.standard.stringArray(forKey: "hiddenApps") ?? [])
 	@FocusState private var searchFocused: Bool
 
 	private let columns = 7
 	private let rows = 5
 	private var perPage: Int { columns * rows }
 
+	private var visibleApps: [AppItem] {
+		store.apps.filter { !hidden.contains($0.url.path) }
+	}
 	private var filtered: [AppItem] {
-		query.isEmpty ? store.apps
-					  : store.apps.filter { $0.name.localizedCaseInsensitiveContains(query) }
+		query.isEmpty ? visibleApps
+					  : visibleApps.filter { $0.name.localizedCaseInsensitiveContains(query) }
 	}
 	private var pages: [[AppItem]] {
 		stride(from: 0, to: filtered.count, by: perPage).map {
@@ -45,7 +62,11 @@ struct LaunchpadView: View {
 		ZStack {
 			VisualEffect().ignoresSafeArea()
 			Color.black.opacity(0.15).ignoresSafeArea()
-				.onTapGesture { NSApp.terminate(nil) }
+				.onTapGesture { dismiss() }
+				.contextMenu {
+					Button("Show Hidden Apps") { unhideAll() }
+						.disabled(hidden.isEmpty)
+				}
 
 			VStack(spacing: 24) {
 				searchBar
@@ -53,28 +74,40 @@ struct LaunchpadView: View {
 				dots
 			}
 			.padding(.vertical, 40)
+			.scaleEffect(appeared ? 1 : 1.1)
 		}
+		.opacity(appeared ? 1 : 0)
+		.environment(\.dismissLaunchpad, { dismiss() })
 		.onChange(of: query) { page = 0 }
+		.onChange(of: hidden) { go(0) }
 		.onAppear {
 			searchFocused = true
 			installMonitors()
+			withAnimation(.easeOut(duration: 0.3)) { appeared = true }
 		}
 	}
 
-	// MARK: - Parts
-
 	private var searchBar: some View {
-		HStack(spacing: 6) {
-			Image(systemName: "magnifyingglass").foregroundStyle(.white.opacity(0.6))
+		HStack(spacing: 10) {
+			Image(systemName: "magnifyingglass")
+				.font(.system(size: 17, weight: .medium))
+				.foregroundStyle(.white.opacity(0.7))
 			TextField("Căutare", text: $query)
 				.textFieldStyle(.plain)
+				.font(.system(size: 18))
 				.foregroundStyle(.white)
 				.focused($searchFocused)
-				.onSubmit { filtered.first?.launch() }
+				.onSubmit {
+					if let first = filtered.first {
+						first.launch()
+						dismiss()
+					}
+				}
 		}
-		.padding(.horizontal, 12).padding(.vertical, 6)
-		.frame(width: 260)
-		.background(.white.opacity(0.15), in: Capsule())
+		.padding(.horizontal, 20)
+		.padding(.vertical, 12)
+		.frame(width: 400)
+		.modifier(GlassCapsule())
 	}
 
 	private var pager: some View {
@@ -82,7 +115,7 @@ struct LaunchpadView: View {
 			let w = geo.size.width
 			HStack(spacing: 0) {
 				ForEach(pages.indices, id: \.self) { i in
-					PageGrid(items: pages[i], columns: columns)
+					PageGrid(items: pages[i], columns: columns, onHide: hide)
 						.frame(width: w, height: geo.size.height, alignment: .top)
 				}
 			}
@@ -113,10 +146,24 @@ struct LaunchpadView: View {
 		.frame(height: 12)
 	}
 
-	// MARK: - Logic
+	private func dismiss() {
+		guard appeared else { return }
+		withAnimation(.easeIn(duration: 0.22)) { appeared = false }
+		DispatchQueue.main.asyncAfter(deadline: .now() + 0.24) { NSApp.terminate(nil) }
+	}
 
 	private func go(_ delta: Int) {
 		page = min(max(page + delta, 0), max(pages.count - 1, 0))
+	}
+
+	private func hide(_ item: AppItem) {
+		hidden.insert(item.url.path)
+		UserDefaults.standard.set(Array(hidden), forKey: "hiddenApps")
+	}
+
+	private func unhideAll() {
+		hidden.removeAll()
+		UserDefaults.standard.removeObject(forKey: "hiddenApps")
 	}
 
 	private func installMonitors() {
@@ -125,7 +172,7 @@ struct LaunchpadView: View {
 
 		NSEvent.addLocalMonitorForEvents(matching: .keyDown) { e in
 			switch e.keyCode {
-			case 53:  NSApp.terminate(nil); return nil   // Esc
+			case 53:  dismiss(); return nil               // Esc
 			case 123: go(-1); return nil                  // ←
 			case 124: go(1);  return nil                  // →
 			default:  return e
@@ -133,7 +180,6 @@ struct LaunchpadView: View {
 		}
 
 		NSEvent.addLocalMonitorForEvents(matching: .scrollWheel) { e in
-			// Ignoră complet inerția (momentum) de după ridicarea degetelor
 			if e.momentumPhase != [] { return e }
 
 			let dx = e.scrollingDeltaX, dy = e.scrollingDeltaY
@@ -143,7 +189,6 @@ struct LaunchpadView: View {
 				scroll.consumed = false
 			}
 
-			// Trackpad: o singură schimbare de pagină per gest
 			if e.phase != [] {
 				if !scroll.consumed, abs(dx) > abs(dy) {
 					scroll.accumulated += dx
@@ -158,7 +203,6 @@ struct LaunchpadView: View {
 				}
 			} else if abs(dx) > abs(dy), abs(dx) > 4,
 					  Date().timeIntervalSince(scroll.lastWheel) > 0.3 {
-				// Mouse cu rotiță (fără faze)
 				scroll.lastWheel = Date()
 				go(dx < 0 ? 1 : -1)
 			}
@@ -170,13 +214,14 @@ struct LaunchpadView: View {
 struct PageGrid: View {
 	let items: [AppItem]
 	let columns: Int
+	let onHide: (AppItem) -> Void
 
 	var body: some View {
 		LazyVGrid(
 			columns: Array(repeating: GridItem(.flexible(), spacing: 24), count: columns),
 			spacing: 28
 		) {
-			ForEach(items) { AppTile(item: $0) }
+			ForEach(items) { AppTile(item: $0, onHide: onHide) }
 		}
 		.padding(.horizontal, 140)
 		.padding(.top, 20)
@@ -186,10 +231,12 @@ struct PageGrid: View {
 
 struct AppTile: View {
 	let item: AppItem
+	let onHide: (AppItem) -> Void
+	@Environment(\.dismissLaunchpad) private var dismiss
 	@State private var hovering = false
 
 	var body: some View {
-		Button { item.launch() } label: {
+		Button { open() } label: {
 			VStack(spacing: 8) {
 				Image(nsImage: item.icon)
 					.resizable()
@@ -208,6 +255,45 @@ struct AppTile: View {
 		.buttonStyle(.plain)
 		.onHover { hovering = $0 }
 		.animation(.easeOut(duration: 0.15), value: hovering)
+		.contextMenu {
+			Button("Open") { open() }
+			Button("Show in Finder") {
+				item.showInFinder()
+				dismiss()
+			}
+			Button("Get Info") {
+				item.getInfo()
+				dismiss()
+			}
+			Divider()
+			Button("Hide") { onHide(item) }
+		}
+	}
+
+	private func open() {
+		item.launch()
+		dismiss()
+	}
+}
+
+extension AppItem {
+	func showInFinder() {
+		NSWorkspace.shared.activateFileViewerSelecting([url])
+	}
+
+	func getInfo() {
+		let path = url.path
+			.replacingOccurrences(of: "\\", with: "\\\\")
+			.replacingOccurrences(of: "\"", with: "\\\"")
+		let source = """
+		tell application "Finder"
+			activate
+			open information window of (POSIX file "\(path)" as alias)
+		end tell
+		"""
+		var error: NSDictionary?
+		NSAppleScript(source: source)?.executeAndReturnError(&error)
+		if let error { print("Get Info error:", error) }
 	}
 }
 
@@ -215,4 +301,14 @@ final class ScrollState {
 	var accumulated: CGFloat = 0
 	var consumed = false
 	var lastWheel = Date.distantPast
+}
+
+struct GlassCapsule: ViewModifier {
+	func body(content: Content) -> some View {
+		if #available(macOS 26.0, *) {
+			content.glassEffect(.regular.interactive(), in: Capsule())
+		} else {
+			content.background(.white.opacity(0.15), in: Capsule())
+		}
+	}
 }

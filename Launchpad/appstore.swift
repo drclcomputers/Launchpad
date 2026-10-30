@@ -22,9 +22,7 @@ struct AppItem: Identifiable, Hashable {
 	}
 
 	func launch() {
-		NSWorkspace.shared.openApplication(at: url, configuration: .init()) { _, _ in
-			DispatchQueue.main.async { NSApp.terminate(nil) }
-		}
+		NSWorkspace.shared.openApplication(at: url, configuration: .init(), completionHandler: nil)
 	}
 }
 
