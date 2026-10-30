@@ -69,6 +69,31 @@ Then select the **Launchpad** scheme and press <kbd>⌘</kbd> + <kbd>R</kbd>.
 | Launch selected app | <kbd>Return</kbd> |
 | Close | <kbd>Esc</kbd> |
 
+## Opening Launchpad with a keyboard shortcut
+
+Launchpad doesn't register a global hotkey itself. Instead, you can create one in a minute with the macOS **Shortcuts** app.
+
+1. Open **Shortcuts** and click **+** to create a new shortcut.
+2. Name it **Open Launchpad**.
+3. In the actions search box, add **Run AppleScript** and paste this script:
+
+   ```applescript
+   tell application "System Events"
+       if not (exists process "Launchpad") then
+           tell application "Launchpad" to launch
+       else
+           tell application "Launchpad" to activate
+       end if
+   end tell
+   ```
+
+4. Open the shortcut's details (the **ⓘ** button in the toolbar).
+5. Click **Add Keyboard Shortcut** and press the combination you want (for example <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>Space</kbd>).
+6. Run it once. macOS will ask for permission to control **System Events**; click **OK** (you can also manage this under *System Settings → Privacy & Security → Automation*).
+
+> **Tip:** Enable **Use as Quick Action** in the details pane if you also want it in the menu bar or Finder.
+> **Note:** If you renamed the app, change `"Launchpad"` in the script to match.
+
 ## Project structure
 
 ```
