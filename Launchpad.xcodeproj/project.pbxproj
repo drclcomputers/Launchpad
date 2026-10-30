@@ -24,6 +24,11 @@
 			path = Launchpad;
 			sourceTree = "<group>";
 		};
+		92567E4430953C380088C34F /* docs */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = docs;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +44,7 @@
 			isa = PBXGroup;
 			children = (
 				926C032B3094E8D0007BCB9D /* README.md */,
+				92567E4430953C380088C34F /* docs */,
 				926C03293094E85F007BCB9D /* LICENSE */,
 				92EDA2053094BBBA00B98258 /* Launchpad.entitlements */,
 				000000000000000000000010 /* Launchpad */,
@@ -69,6 +75,7 @@
 			);
 			fileSystemSynchronizedGroups = (
 				000000000000000000000010 /* Launchpad */,
+				92567E4430953C380088C34F /* docs */,
 			);
 			name = Launchpad;
 			productName = MyApp;

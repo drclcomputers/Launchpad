@@ -251,7 +251,7 @@ struct NativeSearchField: NSViewRepresentable {
 		searchField.focusRingType = .none
 		searchField.isBordered = false
 		searchField.drawsBackground = false
-		searchField.placeholderString = "Căutare"
+		searchField.placeholderString = "Search"
 		searchField.cell?.usesSingleLineMode = true
 		searchField.cell?.isScrollable = true
 		if let cell = searchField.cell as? NSSearchFieldCell {
