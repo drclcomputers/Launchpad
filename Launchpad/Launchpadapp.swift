@@ -22,11 +22,24 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
 	var window: OverlayWindow?
 
 	func applicationDidFinishLaunching(_ notification: Notification) {
+		NSApp.setActivationPolicy(.accessory)
+		showWindow()
+	}
+
+	func showWindow() {
+		if let w = window {
+			w.makeKeyAndOrderFront(nil)
+			NSApp.activate(ignoringOtherApps: true)
+			return
+		}
+
 		guard let screen = NSScreen.main else { return }
+			
 		let w = OverlayWindow(contentRect: screen.frame,
-							  styleMask: [.borderless],
-							  backing: .buffered, defer: false)
-		w.level = .popUpMenu
+							styleMask: [.borderless],
+							backing: .buffered, defer: false)
+			
+		w.level = NSWindow.Level(rawValue: Int(CGShieldingWindowLevel()))
 		w.backgroundColor = .clear
 		w.isOpaque = false
 		w.hasShadow = false
@@ -34,9 +47,16 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
 		w.contentView = NSHostingView(rootView: LaunchpadView())
 		w.makeKeyAndOrderFront(nil)
 		NSApp.activate(ignoringOtherApps: true)
-		NSApp.presentationOptions = [.hideDock, .hideMenuBar]
+			
 		window = w
 	}
 
-	func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool { true }
+	func hideWindow() {
+		window?.orderOut(nil)
+	}
+
+	func applicationShouldHandleReopen(_ sender: NSApplication, hasVisibleWindows flag: Bool) -> Bool {
+		showWindow()
+		return true
+	}
 }

@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-
 private struct DismissKey: EnvironmentKey {
 	static let defaultValue: () -> Void = { NSApp.terminate(nil) }
 }
@@ -37,20 +36,15 @@ struct LaunchpadView: View {
 	@State private var scroll = ScrollState()
 	@State private var monitorsInstalled = false
 	@State private var appeared = false
-	@State private var hidden: Set<String> =
-		Set(UserDefaults.standard.stringArray(forKey: "hiddenApps") ?? [])
 	@FocusState private var searchFocused: Bool
 
 	private let columns = 7
 	private let rows = 5
 	private var perPage: Int { columns * rows }
 
-	private var visibleApps: [AppItem] {
-		store.apps.filter { !hidden.contains($0.url.path) }
-	}
 	private var filtered: [AppItem] {
-		query.isEmpty ? visibleApps
-					  : visibleApps.filter { $0.name.localizedCaseInsensitiveContains(query) }
+		query.isEmpty ? store.apps
+					  : store.apps.filter { $0.name.localizedCaseInsensitiveContains(query) }
 	}
 	private var pages: [[AppItem]] {
 		stride(from: 0, to: filtered.count, by: perPage).map {
@@ -60,13 +54,25 @@ struct LaunchpadView: View {
 
 	var body: some View {
 		ZStack {
-			VisualEffect().ignoresSafeArea()
-			Color.black.opacity(0.15).ignoresSafeArea()
-				.onTapGesture { dismiss() }
-				.contextMenu {
-					Button("Show Hidden Apps") { unhideAll() }
-						.disabled(hidden.isEmpty)
+			Group {
+				if #available(macOS 26.0, *) {
+					Rectangle()
+						.glassEffect(.clear.interactive(), in: .rect)
+						.ignoresSafeArea()
+						.padding(.top, -10)
+						.padding(.bottom, -10)
+					
+					Color.black.opacity(0.35)
+						.ignoresSafeArea()
+				} else {
+					VisualEffect()
+						.ignoresSafeArea()
+					Color.black.opacity(0.25)
+						.ignoresSafeArea()
 				}
+			}
+			.contentShape(Rectangle())
+			.onTapGesture { dismiss() }
 
 			VStack(spacing: 24) {
 				searchBar
@@ -74,16 +80,16 @@ struct LaunchpadView: View {
 				dots
 			}
 			.padding(.vertical, 40)
-			.scaleEffect(appeared ? 1 : 1.1)
+			.scaleEffect(appeared ? 1 : 1.12)
 		}
 		.opacity(appeared ? 1 : 0)
 		.environment(\.dismissLaunchpad, { dismiss() })
 		.onChange(of: query) { page = 0 }
-		.onChange(of: hidden) { go(0) }
 		.onAppear {
-			searchFocused = true
 			installMonitors()
-			withAnimation(.easeOut(duration: 0.3)) { appeared = true }
+			withAnimation(.spring(response: 0.38, dampingFraction: 0.82)) {
+				appeared = true
+			}
 		}
 	}
 
@@ -92,46 +98,50 @@ struct LaunchpadView: View {
 			Image(systemName: "magnifyingglass")
 				.font(.system(size: 17, weight: .medium))
 				.foregroundStyle(.white.opacity(0.7))
-			TextField("Căutare", text: $query)
-				.textFieldStyle(.plain)
-				.font(.system(size: 18))
-				.foregroundStyle(.white)
-				.focused($searchFocused)
-				.onSubmit {
-					if let first = filtered.first {
-						first.launch()
-						dismiss()
-					}
+			
+			NativeSearchField(text: $query) {
+				if let first = filtered.first {
+					first.launch()
+					dismiss()
 				}
+			}
+			.font(.system(size: 18))
+			.frame(height: 24)
 		}
 		.padding(.horizontal, 20)
 		.padding(.vertical, 12)
 		.frame(width: 400)
-		.modifier(GlassCapsule())
+		.background {
+			if #available(macOS 26.0, *) {
+				Capsule()
+					.glassEffect(.regular.interactive(), in: .capsule)
+			} else {
+				Capsule()
+					.fill(.white.opacity(0.15))
+			}
+		}
 	}
 
 	private var pager: some View {
 		GeometryReader { geo in
-			let w = geo.size.width
-			HStack(spacing: 0) {
-				ForEach(pages.indices, id: \.self) { i in
-					PageGrid(items: pages[i], columns: columns, onHide: hide)
-						.frame(width: w, height: geo.size.height, alignment: .top)
-				}
-			}
-			.offset(x: -CGFloat(page) * w + drag)
-			.animation(.interpolatingSpring(stiffness: 220, damping: 28), value: page)
-			.gesture(
-				DragGesture()
-					.onChanged { drag = $0.translation.width }
-					.onEnded { v in
-						if v.translation.width < -w * 0.15 { go(1) }
-						else if v.translation.width > w * 0.15 { go(-1) }
-						withAnimation(.easeOut(duration: 0.25)) { drag = 0 }
+			ScrollView(.horizontal, showsIndicators: false) {
+				HStack(spacing: 0) {
+					ForEach(pages.indices, id: \.self) { i in
+						PageGrid(items: pages[i], columns: columns)
+							.frame(width: geo.size.width, height: geo.size.height, alignment: .top)
+							.id(i)
 					}
-			)
+				}
+				.scrollTargetLayout()
+			}
+			.scrollTargetBehavior(.paging)
+			.scrollPosition(id: Binding(
+				get: { page },
+				set: { page = $0 ?? 0 }
+			))
+			.contentShape(Rectangle())
+			.onTapGesture { }
 		}
-		.clipped()
 	}
 
 	private var dots: some View {
@@ -140,7 +150,11 @@ struct LaunchpadView: View {
 				Circle()
 					.fill(.white.opacity(i == page ? 0.95 : 0.35))
 					.frame(width: 8, height: 8)
-					.onTapGesture { page = i }
+					.onTapGesture {
+						withAnimation(.spring(response: 0.4, dampingFraction: 0.85)) {
+							page = i
+						}
+					}
 			}
 		}
 		.frame(height: 12)
@@ -148,36 +162,31 @@ struct LaunchpadView: View {
 
 	private func dismiss() {
 		guard appeared else { return }
-		withAnimation(.easeIn(duration: 0.22)) { appeared = false }
-		DispatchQueue.main.asyncAfter(deadline: .now() + 0.24) { NSApp.terminate(nil) }
+		withAnimation(.spring(response: 0.28, dampingFraction: 0.90)) {
+			appeared = false
+		}
+		DispatchQueue.main.asyncAfter(deadline: .now() + 0.32) {
+			NSApp.terminate(nil)
+		}
 	}
 
 	private func go(_ delta: Int) {
 		page = min(max(page + delta, 0), max(pages.count - 1, 0))
 	}
 
-	private func hide(_ item: AppItem) {
-		hidden.insert(item.url.path)
-		UserDefaults.standard.set(Array(hidden), forKey: "hiddenApps")
-	}
-
-	private func unhideAll() {
-		hidden.removeAll()
-		UserDefaults.standard.removeObject(forKey: "hiddenApps")
-	}
-
 	private func installMonitors() {
-		guard !monitorsInstalled else { return }
-		monitorsInstalled = true
+			guard !monitorsInstalled else { return }
+			monitorsInstalled = true
 
-		NSEvent.addLocalMonitorForEvents(matching: .keyDown) { e in
-			switch e.keyCode {
-			case 53:  dismiss(); return nil               // Esc
-			case 123: go(-1); return nil                  // ←
-			case 124: go(1);  return nil                  // →
-			default:  return e
+			NSEvent.addLocalMonitorForEvents(matching: .keyDown) { e in
+				switch e.keyCode {
+				case 53:  dismiss(); return nil               // Esc
+				case 123 where query.isEmpty: go(-1); return nil   // ←
+				case 124 where query.isEmpty: go(1);  return nil   // →
+				default:  break
+				}
+				return e
 			}
-		}
 
 		NSEvent.addLocalMonitorForEvents(matching: .scrollWheel) { e in
 			if e.momentumPhase != [] { return e }
@@ -214,14 +223,13 @@ struct LaunchpadView: View {
 struct PageGrid: View {
 	let items: [AppItem]
 	let columns: Int
-	let onHide: (AppItem) -> Void
 
 	var body: some View {
 		LazyVGrid(
 			columns: Array(repeating: GridItem(.flexible(), spacing: 24), count: columns),
 			spacing: 28
 		) {
-			ForEach(items) { AppTile(item: $0, onHide: onHide) }
+			ForEach(items) { AppTile(item: $0) }
 		}
 		.padding(.horizontal, 140)
 		.padding(.top, 20)
@@ -229,9 +237,64 @@ struct PageGrid: View {
 	}
 }
 
+struct NativeSearchField: NSViewRepresentable {
+	@Binding var text: String
+	var onSubmit: () -> Void
+
+	func makeNSView(context: Context) -> NSSearchField {
+		let searchField = NSSearchField()
+		searchField.delegate = context.coordinator
+		searchField.focusRingType = .none
+		searchField.isBordered = false
+		searchField.drawsBackground = false
+		searchField.placeholderString = "Căutare"
+		searchField.cell?.usesSingleLineMode = true
+		searchField.cell?.isScrollable = true
+		if let cell = searchField.cell as? NSSearchFieldCell {
+			cell.searchButtonCell = nil
+		}
+		
+		DispatchQueue.main.async {
+			searchField.window?.makeFirstResponder(searchField)
+		}
+		return searchField
+	}
+
+	func updateNSView(_ nsView: NSSearchField, context: Context) {
+		if nsView.stringValue != text {
+			nsView.stringValue = text
+		}
+	}
+
+	func makeCoordinator() -> Coordinator {
+		Coordinator(self)
+	}
+
+	class Coordinator: NSObject, NSSearchFieldDelegate {
+		var parent: NativeSearchField
+
+		init(_ parent: NativeSearchField) {
+			self.parent = parent
+		}
+
+		func controlTextDidChange(_ obj: Notification) {
+			if let field = obj.object as? NSSearchField {
+				parent.text = field.stringValue
+			}
+		}
+
+		func control(_ control: NSControl, textView: NSTextView, doCommandBy commandSelector: Selector) -> Bool {
+			if commandSelector == #selector(NSResponder.insertNewline(_:)) {
+				parent.onSubmit()
+				return true
+			}
+			return false
+		}
+	}
+}
+
 struct AppTile: View {
 	let item: AppItem
-	let onHide: (AppItem) -> Void
 	@Environment(\.dismissLaunchpad) private var dismiss
 	@State private var hovering = false
 
@@ -254,7 +317,7 @@ struct AppTile: View {
 		}
 		.buttonStyle(.plain)
 		.onHover { hovering = $0 }
-		.animation(.easeOut(duration: 0.15), value: hovering)
+		.animation(.spring(response: 0.25, dampingFraction: 0.7), value: hovering)
 		.contextMenu {
 			Button("Open") { open() }
 			Button("Show in Finder") {
@@ -265,8 +328,6 @@ struct AppTile: View {
 				item.getInfo()
 				dismiss()
 			}
-			Divider()
-			Button("Hide") { onHide(item) }
 		}
 	}
 
@@ -281,19 +342,31 @@ extension AppItem {
 		NSWorkspace.shared.activateFileViewerSelecting([url])
 	}
 
-	func getInfo() {
+	@discardableResult
+	func getInfo() -> Bool {
 		let path = url.path
 			.replacingOccurrences(of: "\\", with: "\\\\")
 			.replacingOccurrences(of: "\"", with: "\\\"")
 		let source = """
 		tell application "Finder"
+			set theItem to POSIX file "\(path)" as alias
+			open information window of theItem
 			activate
-			open information window of (POSIX file "\(path)" as alias)
 		end tell
 		"""
 		var error: NSDictionary?
 		NSAppleScript(source: source)?.executeAndReturnError(&error)
-		if let error { print("Get Info error:", error) }
+		if let error {
+			let code = error[NSAppleScript.errorNumber] as? Int ?? 0
+			let msg = error[NSAppleScript.errorMessage] as? String ?? "Unknown error"
+			print("Get Info failed (\(code)): \(msg)")
+			if code == -1743 {
+				NSWorkspace.shared.open(URL(string:
+					"x-apple.systempreferences:com.apple.preference.security?Privacy_Automation")!)
+			}
+			return false
+		}
+		return true
 	}
 }
 
@@ -301,14 +374,4 @@ final class ScrollState {
 	var accumulated: CGFloat = 0
 	var consumed = false
 	var lastWheel = Date.distantPast
-}
-
-struct GlassCapsule: ViewModifier {
-	func body(content: Content) -> some View {
-		if #available(macOS 26.0, *) {
-			content.glassEffect(.regular.interactive(), in: Capsule())
-		} else {
-			content.background(.white.opacity(0.15), in: Capsule())
-		}
-	}
 }
