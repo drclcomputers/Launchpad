@@ -1,8 +1,12 @@
+// Copyright (c) 2026 @drclcomputers. All rights reserved.
 //
-//  launchpadview.swift
-//  Launchpad
+// This work is licensed under the terms of the MIT license.
+// For a copy, see <https://opensource.org/licenses/MIT>.
 //
-//  Created by Dorneanu Denis on 30/10/2026.
+// Launchpadview.swift
+// Launchpad
+//
+// Created by Dorneanu Denis on 30/10/2026.
 //
 
 import SwiftUI
