@@ -12,6 +12,12 @@
       },
       "shouldTranslate" : false
     },
+    "About" : {
+
+    },
+    "Author" : {
+
+    },
     "Background dim" : {
       "localizations" : {
         "de" : {
@@ -1025,6 +1031,9 @@
           }
         }
       }
+    },
+    "Version" : {
+
     }
   },
   "version" : "1.0"

@@ -26,17 +26,17 @@ Apple removed Launchpad from recent versions of macOS in favor of the Apps view 
 
 | Main grid | Search |
 |:---:|:---:|
-| <img src="docs/screenshots/3.png" width="400" alt="App grid"> | <img src="docs/screenshots/5.png" width="400" alt="Search"> |
+| <img src="docs/screenshots/1.png" width="400" alt="App grid"> | <img src="docs/screenshots/2.png" width="400" alt="Search"> |
 | *Your apps, paginated and sorted* | *Type to filter instantly* |
 
 | Folders | Drag & drop |
 |:---:|:---:|
-| <img src="docs/screenshots/folders.png" width="400" alt="Open folder"> | <img src="docs/screenshots/drag.png" width="400" alt="Dragging an app onto another"> |
+| <img src="docs/screenshots/3.png" width="400" alt="Open folder"> | <img src="docs/screenshots/4.png" width="400" alt="Dragging an app onto another"> |
 | *Group apps, rename, reorder* | *Drop on an app to make a folder, on its side to reorder* |
 
 | Settings | Menu bar |
 |:---:|:---:|
-| <img src="docs/screenshots/settings.png" width="400" alt="Settings panel"> | <img src="docs/screenshots/menubar.png" width="400" alt="Menu bar icon and menu"> |
+| <img src="docs/screenshots/5.png" width="400" alt="Settings panel"> | <img src="docs/screenshots/6.png" width="400" alt="Menu bar icon and menu"> |
 | *Layout, shortcut, language, hidden apps* | *Know it's running, open or quit from the menu bar* |
 
 ## Features

@@ -104,6 +104,17 @@ extension View {
 	}
 }
 
+enum AppInfo {
+	static var version: String {
+		let info = Bundle.main.infoDictionary
+		let short = info?["CFBundleShortVersionString"] as? String ?? "1.0"
+		let build = info?["CFBundleVersion"] as? String ?? "1"
+		return "\(short) (\(build))"
+	}
+
+	static let author = "DRCLComputers"
+}
+
 func animated<R>(_ animation: Animation = .spring(response: 0.35, dampingFraction: 0.85),
 				 _ body: () throws -> R) rethrows -> R {
 	try withAnimation(NSWorkspace.shared.accessibilityDisplayShouldReduceMotion ? nil : animation, body)
@@ -220,6 +231,11 @@ struct SettingsPanel: View {
 							Button("Reset layout", role: .destructive) { confirmReset = true }
 						}
 						Button("Clear launch history") { store.clearLaunchHistory() }
+					}
+
+					Section("About") {
+						LabeledContent("Version") { Text(verbatim: AppInfo.version) }
+						LabeledContent("Author") { Text(verbatim: AppInfo.author) }
 					}
 				}
 				.formStyle(.grouped)
