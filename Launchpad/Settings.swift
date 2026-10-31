@@ -20,12 +20,20 @@ enum Keys {
 	static let language = "language"
 	static let layout = "layout.v1"
 	static let hidden = "hiddenApps.v1"
+	static let menuBar = "menuBar"
+	static let hotkeyEnabled = "hotkeyEnabled"
+	static let hotkeyCode = "hotkeyCode"
+	static let hotkeyMods = "hotkeyMods"
+	static let hotkeyLabel = "hotkeyLabel"
 }
 
 enum Defaults {
 	static let columns = 7
 	static let rows = 5
 	static let iconSize = 96.0
+	static let hotkeyCode = 37
+	static let hotkeyMods = 4096
+	static let hotkeyLabel = "L"
 }
 
 enum AppLanguage: String, CaseIterable, Identifiable {
@@ -103,6 +111,9 @@ struct SettingsPanel: View {
 	@AppStorage(Keys.showLabels) private var showLabels = true
 	@AppStorage(Keys.language) private var language = AppLanguage.system.rawValue
 
+	@AppStorage(Keys.menuBar) private var menuBar = true
+	@AppStorage(Keys.hotkeyEnabled) private var hotkeyEnabled = true
+
 	@State private var launchAtLogin = LaunchAtLogin.isEnabled
 	@State private var confirmReset = false
 
@@ -153,6 +164,14 @@ struct SettingsPanel: View {
 								}
 							}
 						}
+					}
+
+					Section("Shortcut & menu bar") {
+						Toggle("Global shortcut", isOn: $hotkeyEnabled)
+						LabeledContent("Shortcut") { ShortcutField() }
+							.disabled(!hotkeyEnabled)
+						Toggle("Show in menu bar", isOn: $menuBar)
+						Button("Quit Launchpad") { NSApp.terminate(nil) }
 					}
 
 					Section("Hidden apps") {

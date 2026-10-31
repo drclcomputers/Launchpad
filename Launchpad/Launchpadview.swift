@@ -130,6 +130,7 @@ struct LaunchpadView: View {
 			}
 		}
 		.onDisappear { removeMonitors() }
+		.onReceive(NotificationCenter.default.publisher(for: .dismissLaunchpad)) { _ in dismiss() }
 	}
 
 	private var topBar: some View {
@@ -254,9 +255,10 @@ struct LaunchpadView: View {
 		guard monitors.isEmpty else { return }
 
 		let key = NSEvent.addLocalMonitorForEvents(matching: .keyDown) { e in
+			if ShortcutRecording.isActive { return e }
 			let overlayOpen = showSettings || openFolderID != nil
 			switch e.keyCode {
-			case 53:  // Esc: close settings, then folder, then the whole thing
+			case 53:  // Esc
 				if showSettings { showSettings = false }
 				else if openFolderID != nil { openFolderID = nil }
 				else { dismiss() }
@@ -270,33 +272,32 @@ struct LaunchpadView: View {
 
 		let wheel = NSEvent.addLocalMonitorForEvents(matching: .scrollWheel) { e in
 			if showSettings || openFolderID != nil { return e }
-			if e.momentumPhase != [] { return e }
 
 			let dx = e.scrollingDeltaX, dy = e.scrollingDeltaY
+			let delta = abs(dx) >= abs(dy) ? dx : dy
+			let now = Date()
 
-			if e.phase == .mayBegin || e.phase == .began {
-				scroll.accumulated = 0
-				scroll.consumed = false
-			}
+			if e.hasPreciseScrollingDeltas {
+				if e.phase == .began || e.phase == .mayBegin
+					|| now.timeIntervalSince(scroll.lastEvent) > 0.2 {
+					scroll.accumulated = 0
+					scroll.consumed = false
+				}
+				scroll.lastEvent = now
 
-			if e.phase != [] {
-				if !scroll.consumed, abs(dx) > abs(dy) {
-					scroll.accumulated += dx
-					if abs(scroll.accumulated) > 60 {
+				if !scroll.consumed, e.momentumPhase == [] {
+					scroll.accumulated += delta
+					if abs(scroll.accumulated) > 35 {
 						go(scroll.accumulated < 0 ? 1 : -1)
 						scroll.consumed = true
 					}
 				}
-				if e.phase == .ended || e.phase == .cancelled {
-					scroll.accumulated = 0
-					scroll.consumed = false
-				}
-			} else if abs(dx) > abs(dy), abs(dx) > 4,
-					  Date().timeIntervalSince(scroll.lastWheel) > 0.3 {
-				scroll.lastWheel = Date()
-				go(dx < 0 ? 1 : -1)
+			} else if abs(delta) > 0.5,
+					  now.timeIntervalSince(scroll.lastWheel) > 0.25 {
+				scroll.lastWheel = now
+				go(delta < 0 ? 1 : -1)
 			}
-			return e
+			return nil
 		}
 
 		monitors = [key, wheel].compactMap { $0 }
@@ -662,5 +663,6 @@ extension AppItem {
 final class ScrollState {
 	var accumulated: CGFloat = 0
 	var consumed = false
+	var lastEvent = Date.distantPast
 	var lastWheel = Date.distantPast
 }

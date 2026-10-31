@@ -2,7 +2,15 @@
   "sourceLanguage" : "en",
   "strings" : {
     "" : {
-
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
+          }
+        }
+      },
+      "shouldTranslate" : false
     },
     "Cancel" : {
       "localizations" : {
@@ -209,6 +217,40 @@
         }
       }
     },
+    "Global shortcut" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Globaler Tastaturkurzbefehl"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Global shortcut"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Atajo global"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Raccourci global"
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Comandă rapidă globală"
+          }
+        }
+      }
+    },
     "Hidden apps" : {
       "localizations" : {
         "de" : {
@@ -254,19 +296,54 @@
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Esconder"
+            "value" : "Ocultar"
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Cacher"
+            "value" : "Masquer"
           }
         },
         "ro" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ascunde"
+          }
+        }
+      }
+    },
+    "Hide from Launchpad" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "In Launchpad ausblenden"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hide from Launchpad"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ocultar de Launchpad"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Masquer de Launchpad"
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ascunde din Launchpad"
           }
         }
       }
@@ -475,6 +552,109 @@
         }
       }
     },
+    "Open Launchpad" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Launchpad öffnen"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Open Launchpad"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abrir Launchpad"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ouvrir Launchpad"
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Deschide Launchpad"
+          }
+        }
+      }
+    },
+    "Press keys…" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tasten drücken…"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Press keys…"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pulsa las teclas…"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Appuyez sur les touches…"
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apasă tastele…"
+          }
+        }
+      }
+    },
+    "Quit Launchpad" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Launchpad beenden"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Quit Launchpad"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Salir de Launchpad"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Quitter Launchpad"
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Închide Launchpad"
+          }
+        }
+      }
+    },
     "Remove from Folder" : {
       "localizations" : {
         "de" : {
@@ -646,6 +826,74 @@
         }
       }
     },
+    "Shortcut" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kurzbefehl"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Shortcut"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Atajo"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Raccourci"
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Comandă rapidă"
+          }
+        }
+      }
+    },
+    "Shortcut & menu bar" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kurzbefehl und Menüleiste"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Shortcut & menu bar"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Atajo y barra de menús"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Raccourci et barre des menus"
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Comandă rapidă și bara de meniu"
+          }
+        }
+      }
+    },
     "Show app names" : {
       "localizations" : {
         "de" : {
@@ -710,6 +958,40 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Arată în Finder"
+          }
+        }
+      }
+    },
+    "Show in menu bar" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "In der Menüleiste anzeigen"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Show in menu bar"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mostrar en la barra de menús"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Afficher dans la barre des menus"
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Afișează în bara de meniu"
           }
         }
       }

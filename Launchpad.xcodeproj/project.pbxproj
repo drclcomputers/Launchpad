@@ -7,16 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		92567E54309544FA0088C34F /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 92567E53309544FA0088C34F /* Localizable.xcstrings */; };
 		926C032A3094E864007BCB9D /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 926C03293094E85F007BCB9D /* LICENSE */; };
 		926C032C3094E8D3007BCB9D /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 926C032B3094E8D0007BCB9D /* README.md */; };
+		9272C6623095E28E0055F315 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 9272C6613095E28E0055F315 /* Localizable.xcstrings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		000000000000000000000120 /* Launchpad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Launchpad.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		92567E53309544FA0088C34F /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		926C03293094E85F007BCB9D /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		926C032B3094E8D0007BCB9D /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		9272C6613095E28E0055F315 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		92EDA2053094BBBA00B98258 /* Launchpad.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Launchpad.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -50,7 +50,7 @@
 				926C03293094E85F007BCB9D /* LICENSE */,
 				92EDA2053094BBBA00B98258 /* Launchpad.entitlements */,
 				000000000000000000000010 /* Launchpad */,
-				92567E53309544FA0088C34F /* Localizable.xcstrings */,
+				9272C6613095E28E0055F315 /* Localizable.xcstrings */,
 				000000000000000000000020 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -126,7 +126,7 @@
 			files = (
 				926C032C3094E8D3007BCB9D /* README.md in Resources */,
 				926C032A3094E864007BCB9D /* LICENSE in Resources */,
-				92567E54309544FA0088C34F /* Localizable.xcstrings in Resources */,
+				9272C6623095E28E0055F315 /* Localizable.xcstrings in Resources */,
 			);
 		};
 /* End PBXResourcesBuildPhase section */
