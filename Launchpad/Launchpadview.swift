@@ -48,14 +48,13 @@ struct LaunchpadView: View {
 
 	@AppStorage(Keys.columns) private var columns = Defaults.columns
 	@AppStorage(Keys.rows) private var rows = Defaults.rows
+	@AppStorage(Keys.dim) private var dim = Defaults.dim
 
 	private var perPage: Int { max(columns * rows, 1) }
 
 	private var gridEntries: [Entry] {
 		if query.isEmpty { return store.visibleEntries }
-		return store.allVisibleApps
-			.filter { $0.name.localizedCaseInsensitiveContains(query) }
-			.map { Entry.app($0.path) }
+		return store.search(query).map { Entry.app($0.path) }
 	}
 	private var pages: [[Entry]] {
 		let all = gridEntries
@@ -89,12 +88,12 @@ struct LaunchpadView: View {
 						.padding(.top, -10)
 						.padding(.bottom, -10)
 
-					Color.black.opacity(0.35)
+					Color.black.opacity(dim)
 						.ignoresSafeArea()
 				} else {
 					VisualEffect()
 						.ignoresSafeArea()
-					Color.black.opacity(0.25)
+					Color.black.opacity(dim)
 						.ignoresSafeArea()
 				}
 			}

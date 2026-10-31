@@ -43,6 +43,7 @@ Apple removed Launchpad from recent versions of macOS in favor of the Apps view 
 
 - 🔲 **App grid**: all your installed apps in a paginated grid that automatically fits your screen
 - 🔍 **Instant search**: start typing to filter (apps inside folders included), press <kbd>Return</kbd> to launch the first match
+- 📈 **Smart ranking**: results are sorted by how well they match and how often you launch each app, and initials work too (`vsc` finds Visual Studio Code)
 - ⌨️ **Full keyboard navigation**: move around the grid with the arrow keys, launch with <kbd>Return</kbd>, flip pages with <kbd>,</kbd> and <kbd>.</kbd>
 - 🟢 **Running-app dots**: a small dot under the icon of every app that is currently open
 - 🖥️ **Multi-display aware**: opens on the screen where your cursor is
@@ -53,7 +54,7 @@ Apple removed Launchpad from recent versions of macOS in favor of the Apps view 
 - ⌨️ **Global shortcut**: open and close Launchpad from anywhere (<kbd>⌃</kbd><kbd>L</kbd> by default, fully customizable)
 - 🖥️ **Menu bar icon**: optional, so you can see it's running and open or quit it from there
 - 🚀 **Launch at login**: starts silently in the background, ready for your shortcut
-- ⚙️ **Layout settings**: columns, rows, icon size, show or hide app names
+- ⚙️ **Layout settings**: columns, rows, icon size, background dim, show or hide app names
 - 🌍 **Multilingual**: English, Română, Español, Français, Deutsch, switchable in the app
 - 🖱️ **Trackpad, Magic Mouse and wheel mouse**: swipe, scroll or click through pages
 - 🪟 **Native look**: built to match the macOS Liquid Glass design language
@@ -70,7 +71,7 @@ Apple removed Launchpad from recent versions of macOS in favor of the Apps view 
 
 Grab the latest build from the [Releases](https://github.com/drclcomputers/Launchpad/releases) page, unzip it, and drag **Launchpad.app** into your `/Applications` folder.
 
-> On first launch, right-click the app and choose **Open** if macOS warns about an unidentified developer.
+> Builds are not signed or notarized (that needs a paid Apple Developer account), so macOS blocks the first launch. Right-click the app and choose **Open**, or run `xattr -cr /Applications/Launchpad.app` once.
 
 ### Build from source
 
@@ -109,7 +110,7 @@ Launchpad registers a global shortcut by itself, with no extra permissions neede
 3. Press <kbd>Esc</kbd> to cancel. A shortcut must include at least one of <kbd>⌃</kbd>, <kbd>⌥</kbd> or <kbd>⌘</kbd>.
 
 You can also turn the shortcut off completely with the **Global shortcut** switch.
-  
+
 > <kbd>⌃</kbd><kbd>L</kbd> also means "clear screen" in Terminal and most shells. If you use the terminal a lot, pick something like <kbd>⌃</kbd><kbd>⌥</kbd><kbd>L</kbd> or <kbd>⌃</kbd><kbd>Space</kbd>.
 
 ## Settings
@@ -119,19 +120,21 @@ You can also turn the shortcut off completely with the **Global shortcut** switc
 | Columns / Rows | Size of the grid (4–10 columns, 3–7 rows) |
 | Icon size | Icon size, automatically capped so everything fits your screen |
 | Show app names | Show or hide the labels under icons |
+| Background dim | How dark the overlay behind the grid is |
 | Launch at login | Start Launchpad in the background when you log in |
 | Language | System default, English, Română, Español, Français, Deutsch |
 | Global shortcut | Enable, disable and record the shortcut |
 | Show in menu bar | Show or hide the menu bar icon |
 | Hidden apps | See and unhide apps you hid |
 | Reset layout | Remove all folders and custom ordering |
+| Clear launch history | Forget how often you launched each app (resets search ranking) |
 | Quit Launchpad | Fully quit the app |
 
 ## Good to know
 
 - **Launchpad keeps running in the background** after you close it, so reopening is instant. Quit it from the menu bar icon or from Settings.
 - Apps are read from `/Applications`, `/System/Applications` and `~/Applications` (including one level of subfolders such as `Utilities`), and the list is refreshed every time you open Launchpad.
-- Your layout, hidden apps and settings are stored locally in the app's preferences.
+- Your layout, hidden apps, settings and launch counts are stored locally in the app's preferences. Nothing leaves your Mac.
 - A dot under an icon means the app is running. It is read when Launchpad opens.
 
 ## Troubleshooting
@@ -158,26 +161,6 @@ Launchpad/
 ├── Launchpad.entitlements
 └── LICENSE
 ```
-
-## Roadmap
-
-- [ ] Search results ranked by how often you launch each app
-- [ ] Background dim and blur setting
-- [ ] Signed and notarized releases
-
-Have an idea? [Open an issue](https://github.com/drclcomputers/Launchpad/issues).
-
-## Contributing
-
-Contributions are welcome!
-
-1. Fork the repo
-2. Create a branch (`git checkout -b feature/my-feature`)
-3. Commit your changes
-4. Open a pull request
-
-New translations are easy to add: open `Localizable.xcstrings` in Xcode and add a language.
-
 ## License
 
 Released under the [MIT License](LICENSE).

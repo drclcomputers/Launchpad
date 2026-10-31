@@ -28,7 +28,27 @@ struct AppItem: Identifiable, Hashable {
 	}
 
 	func launch() {
+		LaunchStats.record(path)
 		NSWorkspace.shared.openApplication(at: url, configuration: .init(), completionHandler: nil)
+	}
+}
+
+enum LaunchStats {
+	static func counts() -> [String: Int] {
+		guard let data = UserDefaults.standard.data(forKey: Keys.launchCounts) else { return [:] }
+		return (try? JSONDecoder().decode([String: Int].self, from: data)) ?? [:]
+	}
+
+	static func record(_ path: String) {
+		var all = counts()
+		all[path, default: 0] += 1
+		if let data = try? JSONEncoder().encode(all) {
+			UserDefaults.standard.set(data, forKey: Keys.launchCounts)
+		}
+	}
+
+	static func clear() {
+		UserDefaults.standard.removeObject(forKey: Keys.launchCounts)
 	}
 }
 
@@ -58,6 +78,7 @@ final class AppStore: ObservableObject {
 	@Published private(set) var entries: [Entry] = []
 	@Published private(set) var hidden: Set<String> = []
 	@Published private(set) var runningIDs: Set<String> = []
+	@Published private(set) var launchCounts: [String: Int] = [:]
 
 	private var alphabetical: [String] = []
 	private var savedEntries: [Entry] = []
@@ -65,6 +86,7 @@ final class AppStore: ObservableObject {
 
 	init() {
 		refreshRunning()
+		launchCounts = LaunchStats.counts()
 		hidden = Set(load([String].self, key: Keys.hidden) ?? [])
 		savedEntries = load([Entry].self, key: Keys.layout) ?? []
 		Task {
@@ -112,6 +134,39 @@ final class AppStore: ObservableObject {
 	var hiddenApps: [AppItem] {
 		hidden.compactMap { installed[$0] }
 			.sorted { $0.name.localizedCaseInsensitiveCompare($1.name) == .orderedAscending }
+	}
+
+	func search(_ query: String) -> [AppItem] {
+		let q = query.trimmingCharacters(in: .whitespaces)
+		guard !q.isEmpty else { return [] }
+		return allVisibleApps
+			.compactMap { app -> (app: AppItem, tier: Int)? in
+				matchTier(app.name, q).map { (app, $0) }
+			}
+			.sorted { a, b in
+				if a.tier != b.tier { return a.tier < b.tier }
+				let ca = launchCounts[a.app.path, default: 0]
+				let cb = launchCounts[b.app.path, default: 0]
+				if ca != cb { return ca > cb }
+				return a.app.name.localizedCaseInsensitiveCompare(b.app.name) == .orderedAscending
+			}
+			.map(\.app)
+	}
+
+	private func matchTier(_ name: String, _ q: String) -> Int? {
+		let options: String.CompareOptions = [.caseInsensitive, .diacriticInsensitive]
+		let anchored = options.union(.anchored)
+		let words = name.split { !$0.isLetter && !$0.isNumber }.map(String.init)
+		if words.contains(where: { $0.range(of: q, options: anchored) != nil })
+			|| name.range(of: q, options: anchored) != nil { return 0 }
+		if String(words.compactMap(\.first)).range(of: q, options: anchored) != nil { return 1 }
+		if name.range(of: q, options: options) != nil { return 2 }
+		return nil
+	}
+
+	func clearLaunchHistory() {
+		LaunchStats.clear()
+		launchCounts = [:]
 	}
 
 	func hide(_ path: String) { hidden.insert(path); save() }

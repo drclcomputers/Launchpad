@@ -21,6 +21,8 @@ enum Keys {
 	static let layout = "layout.v1"
 	static let hidden = "hiddenApps.v1"
 	static let menuBar = "menuBar"
+	static let launchCounts = "launchCounts.v1"
+	static let dim = "backgroundDim"
 	static let hotkeyEnabled = "hotkeyEnabled"
 	static let hotkeyCode = "hotkeyCode"
 	static let hotkeyMods = "hotkeyMods"
@@ -31,6 +33,7 @@ enum Defaults {
 	static let columns = 7
 	static let rows = 5
 	static let iconSize = 96.0
+	static let dim = 0.35
 	static let hotkeyCode = 37
 	static let hotkeyMods = 4096
 	static let hotkeyLabel = "L"
@@ -114,6 +117,7 @@ struct SettingsPanel: View {
 	@AppStorage(Keys.rows) private var rows = Defaults.rows
 	@AppStorage(Keys.iconSize) private var iconSize = Defaults.iconSize
 	@AppStorage(Keys.showLabels) private var showLabels = true
+	@AppStorage(Keys.dim) private var dim = Defaults.dim
 	@AppStorage(Keys.language) private var language = AppLanguage.system.rawValue
 
 	@AppStorage(Keys.menuBar) private var menuBar = true
@@ -151,6 +155,9 @@ struct SettingsPanel: View {
 							Slider(value: $iconSize, in: 48...128).frame(width: 180)
 						}
 						Toggle("Show app names", isOn: $showLabels)
+						LabeledContent("Background dim") {
+							Slider(value: $dim, in: 0...0.8).frame(width: 180)
+						}
 					}
 
 					Section("General") {
@@ -212,6 +219,7 @@ struct SettingsPanel: View {
 						} else {
 							Button("Reset layout", role: .destructive) { confirmReset = true }
 						}
+						Button("Clear launch history") { store.clearLaunchHistory() }
 					}
 				}
 				.formStyle(.grouped)
