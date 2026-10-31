@@ -12,7 +12,6 @@ Fast, familiar, and native: your apps, one keystroke away.
 ![Stars](https://img.shields.io/github/stars/drclcomputers/Launchpad?style=social)
 
 <img src="docs/screenshots/1.png" alt="Launchpad main grid" width="800">
-<img src="docs/screenshots/2.png" alt="Launchpad in use" width="800">
 
 </div>
 
@@ -20,7 +19,7 @@ Fast, familiar, and native: your apps, one keystroke away.
 
 ## Why?
 
-Apple removed Launchpad from recent versions of macOS in favor of the Apps view (which is kinda buggy). This project brings back the grid-of-apps experience you know, rebuilt from scratch for modern macOS.
+Apple removed Launchpad from recent versions of macOS in favor of the Apps view (which, in my experience, is kinda buggy). This project brings back the grid-of-apps experience you know, rebuilt from scratch for modern macOS.
 
 ## Screenshots
 
