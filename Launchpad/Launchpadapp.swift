@@ -70,7 +70,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
 	}
 
 	func showWindow() {
-		guard let screen = NSScreen.main else { return }
+		guard let screen = screenUnderCursor() else { return }
 		if let w = window, w.isVisible { return }
 
 		let w: OverlayWindow
@@ -93,6 +93,11 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
 		NSApp.unhide(nil)
 		w.makeKeyAndOrderFront(nil)
 		NSApp.activate(ignoringOtherApps: true)
+	}
+
+	private func screenUnderCursor() -> NSScreen? {
+		let mouse = NSEvent.mouseLocation
+		return NSScreen.screens.first { NSMouseInRect(mouse, $0.frame, false) } ?? NSScreen.main
 	}
 
 	func hideWindow() {

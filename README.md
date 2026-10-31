@@ -1,6 +1,6 @@
 # <div align="center">
 
-#  Launchpad
+# Launchpad
 
 **A reimplementation of the classic Launchpad for macOS Tahoe and Golden Gate.**
 
@@ -12,7 +12,7 @@ Fast, familiar, and native: your apps, one keystroke away.
 ![Stars](https://img.shields.io/github/stars/drclcomputers/Launchpad?style=social)
 
 <img src="docs/screenshots/1.png" alt="Launchpad main grid" width="800">
-<img src="docs/screenshots/2.png" alt="Launchpad main grid" width="800">
+<img src="docs/screenshots/2.png" alt="Launchpad in use" width="800">
 
 </div>
 
@@ -29,12 +29,35 @@ Apple removed Launchpad from recent versions of macOS in favor of the Apps view 
 | <img src="docs/screenshots/3.png" width="400" alt="App grid"> | <img src="docs/screenshots/5.png" width="400" alt="Search"> |
 | *Your apps, paginated and sorted* | *Type to filter instantly* |
 
+| Folders | Drag & drop |
+|:---:|:---:|
+| <img src="docs/screenshots/folders.png" width="400" alt="Open folder"> | <img src="docs/screenshots/drag.png" width="400" alt="Dragging an app onto another"> |
+| *Group apps, rename, reorder* | *Drop on an app to make a folder, on its side to reorder* |
+
+| Settings | Menu bar |
+|:---:|:---:|
+| <img src="docs/screenshots/settings.png" width="400" alt="Settings panel"> | <img src="docs/screenshots/menubar.png" width="400" alt="Menu bar icon and menu"> |
+| *Layout, shortcut, language, hidden apps* | *Know it's running, open or quit from the menu bar* |
+
 ## Features
 
-- 🔲 **App grid**: all your installed apps in a paginated grid
-- 🔍 **Instant search**: start typing to filter
-- ⌨️ **Keyboard friendly**: arrow keys to navigate, Return to launch, Esc to close
+- 🔲 **App grid**: all your installed apps in a paginated grid that automatically fits your screen
+- 🔍 **Instant search**: start typing to filter (apps inside folders included), press <kbd>Return</kbd> to launch the first match
+- ⌨️ **Full keyboard navigation**: move around the grid with the arrow keys, launch with <kbd>Return</kbd>, flip pages with <kbd>,</kbd> and <kbd>.</kbd>
+- 🟢 **Running-app dots**: a small dot under the icon of every app that is currently open
+- 🖥️ **Multi-display aware**: opens on the screen where your cursor is
+- ♿ **Reduce Motion support**: follows the macOS accessibility setting and swaps animations for simple fades
+- 📁 **Folders**: drop an app onto another to create one, rename it, reorder inside it, drag apps back out
+- ✋ **Drag & drop**: reorder freely, hold a dragged app at the screen edge to flip pages
+- 🙈 **Hide apps**: right-click → *Hide from Launchpad*, restore any time in Settings
+- ⌨️ **Global shortcut**: open and close Launchpad from anywhere (<kbd>⌃</kbd><kbd>L</kbd> by default, fully customizable)
+- 🖥️ **Menu bar icon**: optional, so you can see it's running and open or quit it from there
+- 🚀 **Launch at login**: starts silently in the background, ready for your shortcut
+- ⚙️ **Layout settings**: columns, rows, icon size, show or hide app names
+- 🌍 **Multilingual**: English, Română, Español, Français, Deutsch, switchable in the app
+- 🖱️ **Trackpad, Magic Mouse and wheel mouse**: swipe, scroll or click through pages
 - 🪟 **Native look**: built to match the macOS Liquid Glass design language
+- 🔒 **Private**: no network access, no analytics, everything stays on your Mac
 
 ## Requirements
 
@@ -61,48 +84,99 @@ Then select the **Launchpad** scheme and press <kbd>⌘</kbd> + <kbd>R</kbd>.
 
 ## Usage
 
-| Action | Shortcut |
+| Action | How |
 |---|---|
-| Open / close Launchpad | `[your shortcut]` |
+| Open / close Launchpad | Your global shortcut (<kbd>⌃</kbd><kbd>L</kbd> by default) or the menu bar icon |
 | Search | Just start typing |
-| Next / previous page | <kbd>→</kbd> / <kbd>←</kbd> or trackpad swipe |
-| Launch selected app | <kbd>Return</kbd> |
-| Close | <kbd>Esc</kbd> |
+| Move around the grid | Arrow keys (the page follows your selection) |
+| Launch the selected app, or open the selected folder | <kbd>Return</kbd> |
+| Launch the first search result | Type, then <kbd>Return</kbd> |
+| Next / previous page | <kbd>.</kbd> / <kbd>,</kbd> (the <kbd>></kbd> / <kbd><</kbd> keys), swipe, mouse wheel, or vertical scroll |
+| Create a folder | Drag an app onto the middle of another app |
+| Reorder | Drag an app onto the left or right side of another |
+| Change page while dragging | Hold the dragged app near the left or right screen edge |
+| Take an app out of a folder | Drag it outside the folder panel, or right-click → *Remove from Folder* |
+| Hide an app | Right-click → *Hide from Launchpad* |
+| Open Settings | Gear button next to the search bar |
+| Close | <kbd>Esc</kbd> (closes Settings or a folder first) or click the background |
 
-## Opening Launchpad with a keyboard shortcut
+## Keyboard shortcut
 
-Launchpad doesn't register a global hotkey itself. Instead, you can create one in a minute with the macOS **Shortcuts** app.
+Launchpad registers a global shortcut by itself, with no extra permissions needed.
 
-1. Open **Shortcuts** and click **+** to create a new shortcut.
-2. Name it **Open Launchpad**.
-3. In the actions search box, add **Run AppleScript** and paste this script:
+1. Open Launchpad and click the gear icon.
+2. In **Shortcut & menu bar**, click the shortcut button and press the combination you want.
+3. Press <kbd>Esc</kbd> to cancel. A shortcut must include at least one of <kbd>⌃</kbd>, <kbd>⌥</kbd> or <kbd>⌘</kbd>.
 
-   ```applescript
-   tell application "System Events"
-       if not (exists process "Launchpad") then
-           tell application "Launchpad" to launch
-       else
-           tell application "Launchpad" to activate
-       end if
-   end tell
-   ```
+You can also turn the shortcut off completely with the **Global shortcut** switch.
+  
+> <kbd>⌃</kbd><kbd>L</kbd> also means "clear screen" in Terminal and most shells. If you use the terminal a lot, pick something like <kbd>⌃</kbd><kbd>⌥</kbd><kbd>L</kbd> or <kbd>⌃</kbd><kbd>Space</kbd>.
 
-4. Open the shortcut's details (the **ⓘ** button in the toolbar).
-5. Click **Add Keyboard Shortcut** and press the combination you want (for example <kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>Space</kbd>).
-6. Run it once. macOS will ask for permission to control **System Events**; click **OK** (you can also manage this under *System Settings → Privacy & Security → Automation*).
+## Settings
 
-> **Tip:** Enable **Use as Quick Action** in the details pane if you also want it in the menu bar or Finder.
-> **Note:** If you renamed the app, change `"Launchpad"` in the script to match.
+| Setting | What it does |
+|---|---|
+| Columns / Rows | Size of the grid (4–10 columns, 3–7 rows) |
+| Icon size | Icon size, automatically capped so everything fits your screen |
+| Show app names | Show or hide the labels under icons |
+| Launch at login | Start Launchpad in the background when you log in |
+| Language | System default, English, Română, Español, Français, Deutsch |
+| Global shortcut | Enable, disable and record the shortcut |
+| Show in menu bar | Show or hide the menu bar icon |
+| Hidden apps | See and unhide apps you hid |
+| Reset layout | Remove all folders and custom ordering |
+| Quit Launchpad | Fully quit the app |
+
+## Good to know
+
+- **Launchpad keeps running in the background** after you close it, so reopening is instant. Quit it from the menu bar icon or from Settings.
+- Apps are read from `/Applications`, `/System/Applications` and `~/Applications` (including one level of subfolders such as `Utilities`), and the list is refreshed every time you open Launchpad.
+- Your layout, hidden apps and settings are stored locally in the app's preferences.
+- A dot under an icon means the app is running. It is read when Launchpad opens.
+
+## Troubleshooting
+
+- **The shortcut does nothing or clashes with another app:** record a different combination in Settings.
+- **Launch at login doesn't stick:** move the app to `/Applications` and check *System Settings → General → Login Items & Extensions*.
+- **Get Info does nothing:** allow Launchpad to control Finder under *System Settings → Privacy & Security → Automation*.
+- **<kbd>,</kbd> and <kbd>.</kbd> don't flip pages:** they only work while the search field is empty and no folder is open, otherwise they are typed into the search.
+- **An app is missing:** it probably lives outside the folders listed above, or it is hidden (check *Hidden apps* in Settings).
 
 ## Project structure
 
 ```
 Launchpad/
-├── Launchpad/              # App source code
-├── Launchpad.xcodeproj/    # Xcode project
-├── Launchpad.entitlements  # App entitlements
+├── Launchpad/
+│   ├── Launchpadapp.swift       # App entry, overlay window, menu bar item
+│   ├── Launchpadview.swift      # Grid, pages, search, folders, tiles
+│   ├── Appstore.swift           # App scanning, layout, folders, hidden apps
+│   ├── Drag.swift               # In-app drag & drop
+│   ├── HotKey.swift             # Global shortcut and recorder
+│   ├── Settings.swift           # Settings panel, languages, launch at login
+│   └── Localizable.xcstrings    # Translations
+├── Launchpad.xcodeproj/
+├── Launchpad.entitlements
 └── LICENSE
 ```
+
+## Roadmap
+
+- [ ] Search results ranked by how often you launch each app
+- [ ] Background dim and blur setting
+- [ ] Signed and notarized releases
+
+Have an idea? [Open an issue](https://github.com/drclcomputers/Launchpad/issues).
+
+## Contributing
+
+Contributions are welcome!
+
+1. Fork the repo
+2. Create a branch (`git checkout -b feature/my-feature`)
+3. Commit your changes
+4. Open a pull request
+
+New translations are easy to add: open `Localizable.xcstrings` in Xcode and add a language.
 
 ## License
 

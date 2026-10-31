@@ -15,6 +15,7 @@ import Combine
 struct AppItem: Identifiable, Hashable {
 	let url: URL
 	let name: String
+	let bundleID: String?
 	var id: URL { url }
 	var path: String { url.path }
 
@@ -56,12 +57,14 @@ final class AppStore: ObservableObject {
 	@Published private(set) var installed: [String: AppItem] = [:]
 	@Published private(set) var entries: [Entry] = []
 	@Published private(set) var hidden: Set<String> = []
+	@Published private(set) var runningIDs: Set<String> = []
 
 	private var alphabetical: [String] = []
 	private var savedEntries: [Entry] = []
 	private let defaults = UserDefaults.standard
 
 	init() {
+		refreshRunning()
 		hidden = Set(load([String].self, key: Keys.hidden) ?? [])
 		savedEntries = load([Entry].self, key: Keys.layout) ?? []
 		Task {
@@ -71,6 +74,16 @@ final class AppStore: ObservableObject {
 	}
 
 	func app(_ path: String) -> AppItem? { installed[path] }
+
+	func isRunning(_ app: AppItem) -> Bool {
+		app.bundleID.map { runningIDs.contains($0) } ?? false
+	}
+
+	private func refreshRunning() {
+		runningIDs = Set(NSWorkspace.shared.runningApplications
+			.filter { $0.activationPolicy == .regular }
+			.compactMap(\.bundleIdentifier))
+	}
 
 	func folder(_ id: UUID) -> Folder? {
 		for case .folder(let f) in entries where f.id == id { return f }
@@ -235,6 +248,7 @@ final class AppStore: ObservableObject {
 		let roots = [
 			URL(fileURLWithPath: "/Applications"),
 			URL(fileURLWithPath: "/System/Applications"),
+			URL(fileURLWithPath: "/System/Cryptexes/App/System/Applications"),
 			fm.homeDirectoryForCurrentUser.appendingPathComponent("Applications")
 		]
 		var result: [AppItem] = []
@@ -249,11 +263,13 @@ final class AppStore: ObservableObject {
 					let name = fm.displayName(atPath: u.path)
 						.replacingOccurrences(of: ".app", with: "")
 					if seen.insert(name).inserted {
-						result.append(AppItem(url: u, name: name))
+						result.append(AppItem(url: u, name: name, bundleID: Bundle(url: u)?.bundleIdentifier))
 					}
-				} else if depth < 1,
-						  (try? u.resourceValues(forKeys: [.isDirectoryKey]).isDirectory) == true {
-					visit(u, depth: depth + 1)   
+				} else if depth < 1 {
+					let resolved = u.resolvingSymlinksInPath()
+					if (try? resolved.resourceValues(forKeys: [.isDirectoryKey]).isDirectory) == true {
+						visit(resolved, depth: depth + 1)
+					}
 				}
 			}
 		}

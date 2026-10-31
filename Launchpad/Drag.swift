@@ -83,7 +83,7 @@ final class DragCoordinator: ObservableObject {
 			switch context {
 			case .grid:
 				if let t {
-					withAnimation(.spring(response: 0.35, dampingFraction: 0.85)) {
+					animated {
 						store.drop(id, on: t.id, zone: t.zone)
 					}
 				}
@@ -93,7 +93,7 @@ final class DragCoordinator: ObservableObject {
 					store.removeFromFolder(path)
 					outcome = .removedFromFolder
 				} else if let t, t.id.hasPrefix("f:") {
-					withAnimation(.spring(response: 0.35, dampingFraction: 0.85)) {
+					animated {
 						store.moveInFolder(path, onto: String(t.id.dropFirst(2)))
 					}
 				}

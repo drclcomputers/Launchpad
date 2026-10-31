@@ -101,6 +101,11 @@ extension View {
 	}
 }
 
+func animated<R>(_ animation: Animation = .spring(response: 0.35, dampingFraction: 0.85),
+				 _ body: () throws -> R) rethrows -> R {
+	try withAnimation(NSWorkspace.shared.accessibilityDisplayShouldReduceMotion ? nil : animation, body)
+}
+
 struct SettingsPanel: View {
 	let close: () -> Void
 	@EnvironmentObject private var store: AppStore

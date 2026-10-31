@@ -42,6 +42,9 @@ struct LaunchpadView: View {
 	@State private var appeared = false
 	@State private var showSettings = false
 	@State private var openFolderID: UUID?
+	@State private var selectedID: String?
+
+	@Environment(\.accessibilityReduceMotion) private var reduceMotion
 
 	@AppStorage(Keys.columns) private var columns = Defaults.columns
 	@AppStorage(Keys.rows) private var rows = Defaults.rows
@@ -59,6 +62,14 @@ struct LaunchpadView: View {
 		return stride(from: 0, to: all.count, by: perPage).map {
 			Array(all[$0..<min($0 + perPage, all.count)])
 		}
+	}
+
+	private var appearAnimation: Animation {
+		reduceMotion ? .easeOut(duration: 0.12) : .spring(response: 0.38, dampingFraction: 0.82)
+	}
+
+	private var dismissAnimation: Animation {
+		reduceMotion ? .easeOut(duration: 0.12) : .spring(response: 0.28, dampingFraction: 0.90)
 	}
 
 	private var openFolder: Folder? {
@@ -96,11 +107,11 @@ struct LaunchpadView: View {
 				dots
 			}
 			.padding(.vertical, 40)
-			.scaleEffect(appeared ? 1 : 1.12)
+			.scaleEffect(appeared || reduceMotion ? 1 : 1.12)
 
 			if let folder = openFolder {
-				FolderOverlay(folder: folder) { openFolderID = nil }
-					.transition(.opacity.combined(with: .scale(scale: 0.96)))
+				FolderOverlay(folder: folder, selectedID: selectedID) { openFolderID = nil }
+					.transition(reduceMotion ? .opacity : .opacity.combined(with: .scale(scale: 0.96)))
 			}
 
 			if showSettings {
@@ -115,17 +126,21 @@ struct LaunchpadView: View {
 		.onPreferenceChange(TileFramesKey.self) { frames in
 			MainActor.assumeIsolated { drag.frames = frames }
 		}
-		.animation(.spring(response: 0.3, dampingFraction: 0.85), value: openFolderID)
-		.animation(.spring(response: 0.3, dampingFraction: 0.85), value: showSettings)
+		.animation(reduceMotion ? nil : .spring(response: 0.3, dampingFraction: 0.85), value: openFolderID)
+		.animation(reduceMotion ? nil : .spring(response: 0.3, dampingFraction: 0.85), value: showSettings)
 		.opacity(appeared ? 1 : 0)
 		.environmentObject(store)
 		.environmentObject(drag)
 		.environment(\.dismissLaunchpad, { dismiss() })
-		.onChange(of: query) { page = 0 }
+		.onChange(of: query) {
+			page = 0
+			selectedID = query.isEmpty ? nil : gridEntries.first?.id
+		}
+		.onChange(of: openFolderID) { selectedID = nil }
 		.onChange(of: pages.count) { page = min(page, max(pages.count - 1, 0)) }
 		.onAppear {
 			installMonitors()
-			withAnimation(.spring(response: 0.38, dampingFraction: 0.82)) {
+			withAnimation(appearAnimation) {
 				appeared = true
 			}
 		}
@@ -150,7 +165,7 @@ struct LaunchpadView: View {
 				.font(.system(size: 17, weight: .medium))
 				.foregroundStyle(.white.opacity(0.7))
 
-			NativeSearchField(text: $query) { launchFirst() }
+			NativeSearchField(text: $query) { activateSelected() }
 				.font(.system(size: 18))
 				.frame(height: 24)
 		}
@@ -191,6 +206,7 @@ struct LaunchpadView: View {
 								 rows: rows,
 								 size: geo.size,
 								 reorderable: query.isEmpty,
+								 selectedID: selectedID,
 								 onOpenFolder: { openFolderID = $0 })
 							.frame(width: geo.size.width, height: geo.size.height, alignment: .top)
 							.id(i)
@@ -216,7 +232,7 @@ struct LaunchpadView: View {
 					.fill(.white.opacity(i == page ? 0.95 : 0.35))
 					.frame(width: 8, height: 8)
 					.onTapGesture {
-						withAnimation(.spring(response: 0.4, dampingFraction: 0.85)) {
+						animated(.spring(response: 0.4, dampingFraction: 0.85)) {
 							page = i
 						}
 					}
@@ -225,28 +241,103 @@ struct LaunchpadView: View {
 		.frame(height: 12)
 	}
 
-	private func launchFirst() {
-		guard let first = gridEntries.first,
-			  case .app(let path) = first,
-			  let app = store.app(path) else { return }
-		app.launch()
-		dismiss()
+	private func activateSelected() {
+		if let folder = openFolder {
+			let match = store.visibleApps(in: folder).first { "app:" + $0.path == selectedID }
+			if let match {
+				match.launch()
+				dismiss()
+			}
+			return
+		}
+
+		let selected = gridEntries.first { $0.id == selectedID }
+		guard let entry = selected ?? (query.isEmpty ? nil : gridEntries.first) else { return }
+
+		switch entry {
+		case .app(let path):
+			store.app(path)?.launch()
+			dismiss()
+		case .folder(let folder):
+			openFolderID = folder.id
+		}
+	}
+
+	private func moveSelection(_ key: UInt16) {
+		if let folder = openFolder {
+			let ids = store.visibleApps(in: folder).map { "app:" + $0.path }
+			guard !ids.isEmpty else { return }
+			let current = selectedID.flatMap { ids.firstIndex(of: $0) }
+			let next = current.map {
+				neighbor(of: $0, key: key, columns: max(1, min(ids.count, 4)),
+						 horizontal: 0..<ids.count, vertical: 0..<ids.count)
+			} ?? 0
+			selectedID = ids[next]
+			return
+		}
+
+		let all = gridEntries
+		let pageStart = page * perPage
+		guard pageStart < all.count else { return }
+		let pageEnd = min(pageStart + perPage, all.count)
+
+		let current = selectedID
+			.flatMap { id in all.firstIndex { $0.id == id } }
+			.flatMap { (pageStart..<pageEnd).contains($0) ? $0 : nil }
+		let next = current.map {
+			neighbor(of: $0, key: key, columns: max(columns, 1),
+					 horizontal: 0..<all.count, vertical: pageStart..<pageEnd)
+		} ?? pageStart
+
+		selectedID = all[next].id
+		let newPage = next / perPage
+		if newPage != page {
+			animated(.spring(response: 0.4, dampingFraction: 0.85)) { page = newPage }
+		}
+	}
+
+	private func neighbor(of i: Int, key: UInt16, columns: Int,
+						  horizontal: Range<Int>, vertical: Range<Int>) -> Int {
+		switch key {
+		case 123:
+			return i > horizontal.lowerBound ? i - 1 : i
+		case 124:
+			return i + 1 < horizontal.upperBound ? i + 1 : i
+		case 126:
+			return i - columns >= vertical.lowerBound ? i - columns : i
+		case 125:
+			let row = (i - vertical.lowerBound) / columns
+			let lastRow = (vertical.upperBound - 1 - vertical.lowerBound) / columns
+			return row < lastRow ? min(i + columns, vertical.upperBound - 1) : i
+		default:
+			return i
+		}
+	}
+
+	private func changePage(_ delta: Int) {
+		let target = min(max(page + delta, 0), max(pages.count - 1, 0))
+		guard target != page else { return }
+		go(delta)
+		if selectedID != nil {
+			let all = gridEntries
+			selectedID = all.indices.contains(target * perPage) ? all[target * perPage].id : nil
+		}
 	}
 
 	private func dismiss() {
 		guard appeared else { return }
 		removeMonitors()
-		withAnimation(.spring(response: 0.28, dampingFraction: 0.90)) {
+		withAnimation(dismissAnimation) {
 			appeared = false
 		}
-		DispatchQueue.main.asyncAfter(deadline: .now() + 0.32) {
+		DispatchQueue.main.asyncAfter(deadline: .now() + (reduceMotion ? 0.15 : 0.32)) {
 			AppDelegate.shared?.hideWindow()
 		}
 	}
 
 	private func go(_ delta: Int) {
 		let target = min(max(page + delta, 0), max(pages.count - 1, 0))
-		withAnimation(.spring(response: 0.4, dampingFraction: 0.85)) {
+		animated(.spring(response: 0.4, dampingFraction: 0.85)) {
 			page = target
 		}
 	}
@@ -256,17 +347,35 @@ struct LaunchpadView: View {
 
 		let key = NSEvent.addLocalMonitorForEvents(matching: .keyDown) { e in
 			if ShortcutRecording.isActive { return e }
-			let overlayOpen = showSettings || openFolderID != nil
-			switch e.keyCode {
-			case 53:  // Esc
+
+			if e.keyCode == 53 {
 				if showSettings { showSettings = false }
 				else if openFolderID != nil { openFolderID = nil }
 				else { dismiss() }
 				return nil
-			case 123 where query.isEmpty && !overlayOpen: go(-1); return nil   // ←
-			case 124 where query.isEmpty && !overlayOpen: go(1);  return nil   // →
-			default: break
 			}
+
+			if showSettings { return e }
+
+			if let editor = e.window?.firstResponder as? NSTextView,
+			   editor.isFieldEditor, !(editor.delegate is NSSearchField) {
+				return e
+			}
+
+			if (123...126).contains(e.keyCode) {
+				moveSelection(e.keyCode)
+				return nil
+			}
+
+			if openFolderID == nil, query.isEmpty,
+			   e.modifierFlags.intersection([.command, .control, .option]).isEmpty {
+				switch e.charactersIgnoringModifiers {
+				case ",", "<": changePage(-1); return nil
+				case ".", ">": changePage(1); return nil
+				default: break
+				}
+			}
+
 			return e
 		}
 
@@ -315,6 +424,7 @@ struct PageGrid: View {
 	let rows: Int
 	let size: CGSize
 	let reorderable: Bool
+	let selectedID: String?
 	let onOpenFolder: (UUID) -> Void
 
 	@AppStorage(Keys.iconSize) private var iconSize = Defaults.iconSize
@@ -342,6 +452,7 @@ struct PageGrid: View {
 								  iconSize: icon,
 								  showLabel: showLabels,
 								  reorderable: reorderable,
+								  selected: entry.id == selectedID,
 								  onOpenFolder: onOpenFolder)
 							.frame(width: cellW)
 					}
@@ -359,11 +470,17 @@ struct EntryTile: View {
 	let iconSize: CGFloat
 	let showLabel: Bool
 	let reorderable: Bool
+	let selected: Bool
 	let onOpenFolder: (UUID) -> Void
 	@EnvironmentObject private var store: AppStore
 
 	var body: some View {
-		tile.modifier(DragSource(id: entry.id,
+		tile
+			.background {
+				RoundedRectangle(cornerRadius: 22, style: .continuous)
+					.fill(.white.opacity(selected ? 0.18 : 0))
+			}
+			.modifier(DragSource(id: entry.id,
 								 frameKey: entry.id,
 								 context: .grid,
 								 iconSize: iconSize,
@@ -393,6 +510,7 @@ struct AppTile: View {
 	@EnvironmentObject private var store: AppStore
 	@EnvironmentObject private var drag: DragCoordinator
 	@Environment(\.dismissLaunchpad) private var dismiss
+	@Environment(\.accessibilityReduceMotion) private var reduceMotion
 	@State private var hovering = false
 
 	var body: some View {
@@ -401,7 +519,15 @@ struct AppTile: View {
 				.resizable()
 				.interpolation(.high)
 				.frame(width: iconSize, height: iconSize)
-				.scaleEffect(hovering ? 1.06 : 1)
+				.overlay(alignment: .bottom) {
+					if store.isRunning(item) {
+						Circle()
+							.fill(.white.opacity(0.9))
+							.frame(width: 5, height: 5)
+							.offset(y: 6)
+					}
+				}
+				.scaleEffect(hovering && !reduceMotion ? 1.06 : 1)
 				.shadow(color: .black.opacity(0.25), radius: 6, y: 3)
 			if showLabel {
 				Text(verbatim: item.name)
@@ -450,13 +576,14 @@ struct FolderTile: View {
 
 	@EnvironmentObject private var store: AppStore
 	@EnvironmentObject private var drag: DragCoordinator
+	@Environment(\.accessibilityReduceMotion) private var reduceMotion
 	@State private var hovering = false
 
 	var body: some View {
 		let apps = Array(store.visibleApps(in: folder).prefix(9))
 		VStack(spacing: 8) {
 			FolderIcon(apps: apps, size: iconSize)
-				.scaleEffect(hovering ? 1.06 : 1)
+				.scaleEffect(hovering && !reduceMotion ? 1.06 : 1)
 			if showLabel {
 				Text(verbatim: folder.name)
 					.font(.system(size: 13))
@@ -508,6 +635,7 @@ struct FolderIcon: View {
 
 struct FolderOverlay: View {
 	let folder: Folder
+	let selectedID: String?
 	let close: () -> Void
 	@EnvironmentObject private var store: AppStore
 
@@ -559,6 +687,10 @@ struct FolderOverlay: View {
 		) {
 			ForEach(apps) { app in
 				AppTile(item: app, iconSize: 72, showLabel: true, inFolder: true)
+					.background {
+						RoundedRectangle(cornerRadius: 18, style: .continuous)
+							.fill(.white.opacity(selectedID == "app:" + app.path ? 0.18 : 0))
+					}
 					.modifier(DragSource(id: "app:" + app.path,
 										 frameKey: "f:" + app.path,
 										 context: .folder,
