@@ -6,7 +6,7 @@
 // Drag.swift
 // Launchpad
 //
-//  Created by Dorneanu Denis on 30/10/2026.
+// Created by Dorneanu Denis on 30/10/2026.
 //
 
 import SwiftUI

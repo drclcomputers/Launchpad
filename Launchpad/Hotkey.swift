@@ -6,7 +6,7 @@
 // HotKey.swift
 // Launchpad
 //
-//  Created by Dorneanu Denis on 31/10/2026.
+// Created by Dorneanu Denis on 31/10/2026.
 //
 
 import SwiftUI

@@ -50,6 +50,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
 		NSApp.setActivationPolicy(.accessory)
 
 		HotKeyManager.shared.onTrigger = { [weak self] in self?.toggleWindow() }
+		PinchDetector.shared.onPinch = { Task { @MainActor in AppDelegate.shared?.toggleWindow() } }
 		applySettings()
 
 		NotificationCenter.default.addObserver(
@@ -125,9 +126,10 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
 		let hotkeyOn = d.bool(forKey: Keys.hotkeyEnabled)
 		let code = d.integer(forKey: Keys.hotkeyCode)
 		let mods = d.integer(forKey: Keys.hotkeyMods)
+		let pinch = d.bool(forKey: Keys.pinch)
 		let language = d.string(forKey: Keys.language) ?? ""
 
-		let signature = "\(menuBar)|\(hotkeyOn)|\(code)|\(mods)|\(language)"
+		let signature = "\(menuBar)|\(hotkeyOn)|\(code)|\(mods)|\(pinch)|\(language)"
 		guard signature != appliedSignature else { return }
 		appliedSignature = signature
 
@@ -138,6 +140,8 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
 		}
 
 		if menuBar { installStatusItem() } else { removeStatusItem() }
+
+		if pinch { PinchDetector.shared.start() } else { PinchDetector.shared.stop() }
 	}
 
 	private func installStatusItem() {

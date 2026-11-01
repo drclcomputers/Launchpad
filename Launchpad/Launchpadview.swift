@@ -49,6 +49,7 @@ struct LaunchpadView: View {
 	@AppStorage(Keys.columns) private var columns = Defaults.columns
 	@AppStorage(Keys.rows) private var rows = Defaults.rows
 	@AppStorage(Keys.dim) private var dim = Defaults.dim
+	@AppStorage(Keys.onboarded) private var onboarded = false
 
 	private var perPage: Int { max(columns * rows, 1) }
 
@@ -118,6 +119,11 @@ struct LaunchpadView: View {
 					.transition(.opacity)
 			}
 
+			if !onboarded {
+				OnboardingPanel { onboarded = true }
+					.transition(.opacity)
+			}
+
 			DragPreview(pointer: drag.pointer)
 			EdgeFlipper { go($0) }
 		}
@@ -127,6 +133,7 @@ struct LaunchpadView: View {
 		}
 		.animation(reduceMotion ? nil : .spring(response: 0.3, dampingFraction: 0.85), value: openFolderID)
 		.animation(reduceMotion ? nil : .spring(response: 0.3, dampingFraction: 0.85), value: showSettings)
+		.animation(reduceMotion ? nil : .easeInOut(duration: 0.2), value: onboarded)
 		.opacity(appeared ? 1 : 0)
 		.environmentObject(store)
 		.environmentObject(drag)
@@ -348,11 +355,14 @@ struct LaunchpadView: View {
 			if ShortcutRecording.isActive { return e }
 
 			if e.keyCode == 53 {
-				if showSettings { showSettings = false }
+				if !onboarded { onboarded = true }
+				else if showSettings { showSettings = false }
 				else if openFolderID != nil { openFolderID = nil }
 				else { dismiss() }
 				return nil
 			}
+
+			if !onboarded { return nil }
 
 			if showSettings { return e }
 
@@ -379,7 +389,7 @@ struct LaunchpadView: View {
 		}
 
 		let wheel = NSEvent.addLocalMonitorForEvents(matching: .scrollWheel) { e in
-			if showSettings || openFolderID != nil { return e }
+			if showSettings || openFolderID != nil || !onboarded { return e }
 
 			let dx = e.scrollingDeltaX, dy = e.scrollingDeltaY
 			let delta = abs(dx) >= abs(dy) ? dx : dy

@@ -3,10 +3,10 @@
 // This work is licensed under the terms of the MIT license.
 // For a copy, see <https://opensource.org/licenses/MIT>.
 //
-//  Settings.swift
-//  Launchpad
+// Settings.swift
+// Launchpad
 //
-//  Created by Dorneanu Denis on 30/10/2026.
+// Created by Dorneanu Denis on 30/10/2026.
 //
 
 import SwiftUI
@@ -23,6 +23,8 @@ enum Keys {
 	static let menuBar = "menuBar"
 	static let launchCounts = "launchCounts.v1"
 	static let dim = "backgroundDim"
+	static let onboarded = "onboarded"
+	static let pinch = "pinchToOpen"
 	static let hotkeyEnabled = "hotkeyEnabled"
 	static let hotkeyCode = "hotkeyCode"
 	static let hotkeyMods = "hotkeyMods"
@@ -34,13 +36,13 @@ enum Defaults {
 	static let rows = 5
 	static let iconSize = 96.0
 	static let dim = 0.35
-	static let hotkeyCode = 37
-	static let hotkeyMods = 4096
-	static let hotkeyLabel = "L"
+	static let hotkeyCode = 49
+	static let hotkeyMods = 2048
+	static let hotkeyLabel = "Space"
 }
 
 enum AppLanguage: String, CaseIterable, Identifiable {
-	case system, en, ro, es, fr, de
+	case system, en, ro, es, fr, de, it, nl, pt, ja, zhHans = "zh-Hans"
 	var id: String { rawValue }
 
 	var locale: Locale {
@@ -55,6 +57,11 @@ enum AppLanguage: String, CaseIterable, Identifiable {
 		case .es: "Español"
 		case .fr: "Français"
 		case .de: "Deutsch"
+		case .it: "Italiano"
+		case .nl: "Nederlands"
+		case .pt: "Português"
+		case .ja: "日本語"
+		case .zhHans: "简体中文"
 		}
 	}
 }
@@ -129,6 +136,8 @@ struct SettingsPanel: View {
 	@AppStorage(Keys.iconSize) private var iconSize = Defaults.iconSize
 	@AppStorage(Keys.showLabels) private var showLabels = true
 	@AppStorage(Keys.dim) private var dim = Defaults.dim
+	@AppStorage(Keys.pinch) private var pinchEnabled = false
+	@AppStorage(Keys.onboarded) private var onboarded = false
 	@AppStorage(Keys.language) private var language = AppLanguage.system.rawValue
 
 	@AppStorage(Keys.menuBar) private var menuBar = true
@@ -194,6 +203,12 @@ struct SettingsPanel: View {
 						LabeledContent("Shortcut") { ShortcutField() }
 							.disabled(!hotkeyEnabled)
 						Toggle("Show in menu bar", isOn: $menuBar)
+						Toggle("Pinch to open (experimental)", isOn: $pinchEnabled)
+						if pinchEnabled {
+							Text("Also turn off the Launchpad/Apps pinch in System Settings → Trackpad → More Gestures.")
+								.font(.callout)
+								.foregroundStyle(.secondary)
+						}
 						Button("Quit Launchpad") { NSApp.terminate(nil) }
 					}
 
@@ -236,6 +251,10 @@ struct SettingsPanel: View {
 					Section("About") {
 						LabeledContent("Version") { Text(verbatim: AppInfo.version) }
 						LabeledContent("Author") { Text(verbatim: AppInfo.author) }
+						Button("Show welcome guide") {
+							onboarded = false
+							close()
+						}
 					}
 				}
 				.formStyle(.grouped)
