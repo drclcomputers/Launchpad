@@ -142,10 +142,12 @@ struct DragSource: ViewModifier {
 							  height: iconSize)
 			}
 			.background {
-				GeometryReader { g in
-					Color.clear.preference(
-						key: TileFramesKey.self,
-						value: [frameKey: g.frame(in: .named(launchpadSpace))])
+				if drag.draggingID != nil {
+					GeometryReader { g in
+						Color.clear.preference(
+							key: TileFramesKey.self,
+							value: [frameKey: g.frame(in: .named(launchpadSpace))])
+					}
 				}
 			}
 			.simultaneousGesture(

@@ -14,6 +14,8 @@ import SwiftUI
 struct OnboardingPanel: View {
 	let finish: () -> Void
 
+	@AppStorage(Keys.pinch) private var pinchEnabled = false
+	@Environment(\.dismissLaunchpad) private var dismissLaunchpad
 	@State private var step = 0
 
 	private struct Page {
@@ -34,9 +36,14 @@ struct OnboardingPanel: View {
 			 text: "Use the arrow keys to move around, Return to open, and the , and . keys to flip pages. Esc closes Launchpad."),
 		Page(icon: "command",
 			 title: "Open it from anywhere",
-			 text: "Choose a shortcut to open and close Launchpad from any app. You can change it later in Settings.")
+			 text: "Choose a shortcut to open and close Launchpad from any app. You can change it later in Settings."),
+		Page(icon: "arrow.down.right.and.arrow.up.left",
+			 title: "Pinch to open and close",
+			 text: "Pinch with your thumb and three fingers to open Launchpad, and spread them to close it. macOS handles these gestures too, so turn them off in Trackpad settings.")
 	]
 
+	private var isShortcutPage: Bool { step == 3 }
+	private var isPinchPage: Bool { step == 4 }
 	private var isLast: Bool { step == pages.count - 1 }
 
 	var body: some View {
@@ -63,7 +70,7 @@ struct OnboardingPanel: View {
 						.fixedSize(horizontal: false, vertical: true)
 				}
 
-				if isLast {
+				if isShortcutPage {
 					ShortcutField()
 						.controlSize(.large)
 					Text("Launchpad keeps running in the background. Use the menu bar icon to open or quit it.")
@@ -71,6 +78,24 @@ struct OnboardingPanel: View {
 						.foregroundStyle(.white.opacity(0.6))
 						.multilineTextAlignment(.center)
 						.fixedSize(horizontal: false, vertical: true)
+				}
+
+				if isPinchPage {
+					Toggle("Pinch to open and close", isOn: $pinchEnabled)
+						.toggleStyle(.switch)
+						.fixedSize()
+					if pinchEnabled {
+						Text("Also turn off the Apps pinch and the Show Desktop spread in System Settings → Trackpad → More Gestures.")
+							.font(.system(size: 13))
+							.foregroundStyle(.white.opacity(0.6))
+							.multilineTextAlignment(.center)
+							.fixedSize(horizontal: false, vertical: true)
+						Button("Open Trackpad Settings") {
+							finish()
+							TrackpadSettings.open()
+							dismissLaunchpad()
+						}
+					}
 				}
 
 				HStack(spacing: 8) {

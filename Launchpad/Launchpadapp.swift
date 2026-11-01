@@ -50,7 +50,8 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
 		NSApp.setActivationPolicy(.accessory)
 
 		HotKeyManager.shared.onTrigger = { [weak self] in self?.toggleWindow() }
-		PinchDetector.shared.onPinch = { Task { @MainActor in AppDelegate.shared?.toggleWindow() } }
+		PinchDetector.shared.onPinch = { Task { @MainActor in AppDelegate.shared?.showWindow() } }
+		PinchDetector.shared.onSpread = { Task { @MainActor in AppDelegate.shared?.closeWindow() } }
 		applySettings()
 
 		NotificationCenter.default.addObserver(
@@ -105,6 +106,12 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
 		window?.orderOut(nil)
 		window?.contentView = nil
 		if NSApp.isActive { NSApp.hide(nil) }
+	}
+
+	func closeWindow() {
+		if window?.isVisible == true {
+			NotificationCenter.default.post(name: .dismissLaunchpad, object: nil)
+		}
 	}
 
 	func toggleWindow() {

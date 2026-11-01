@@ -140,67 +140,66 @@
         }
       }
     },
-    "Also turn off the Launchpad/Apps pinch in System Settings → Trackpad → More Gestures." : {
-      "extractionState" : "stale",
+    "Also turn off the Apps pinch and the Show Desktop spread in System Settings → Trackpad → More Gestures." : {
       "localizations" : {
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Deaktiviere auch die Launchpad/Apps-Geste unter Systemeinstellungen → Trackpad → Weitere Gesten."
+            "value" : "Deaktiviere auch die Apps-Geste und die Schreibtisch-Spreizgeste unter Systemeinstellungen → Trackpad → Weitere Gesten."
           }
         },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Also turn off the Launchpad/Apps pinch in System Settings → Trackpad → More Gestures."
+            "value" : "Also turn off the Apps pinch and the Show Desktop spread in System Settings → Trackpad → More Gestures."
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "También desactiva el pellizco de Launchpad/Apps en Ajustes del sistema → Trackpad → Más gestos."
+            "value" : "También desactiva el pellizco de Apps y el gesto de separar para mostrar el escritorio en Ajustes del sistema → Trackpad → Más gestos."
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Désactivez également le pincement Launchpad/Apps dans Réglages système → Trackpad → Autres gestes."
+            "value" : "Désactivez également le pincement Apps et l’écartement Afficher le bureau dans Réglages système → Trackpad → Autres gestes."
           }
         },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Disattiva anche il pinch di Launchpad/App in Impostazioni di sistema → Trackpad → Altri gesti."
+            "value" : "Disattiva anche il pinch di App e il gesto di allargamento per mostrare il Desktop in Impostazioni di sistema → Trackpad → Altri gesti."
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "システム設定 → トラックパッド → その他のジェスチャで、Launchpad/Appsのピンチもオフにしてください。"
+            "value" : "システム設定 → トラックパッド → その他のジェスチャで、Appsのピンチとデスクトップを表示するスプレッドもオフにしてください。"
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Schakel ook de Launchpad/Apps-pinch uit in Systeeminstellingen → Trackpad → Meer gebaren."
+            "value" : "Schakel ook de Apps-pinch en de Bureaublad tonen-spreiding uit in Systeeminstellingen → Trackpad → Meer gebaren."
           }
         },
         "pt" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Desative também o pinça de Launchpad/Apps em Definições do Sistema → Trackpad → Mais Gestos."
+            "value" : "Desative também o pinça de Apps e o gesto de afastar para mostrar o ambiente de trabalho em Definições do Sistema → Trackpad → Mais Gestos."
           }
         },
         "ro" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Dezactivează și gestul de ciupire Launchpad/Aplicații din Setări sistem → Trackpad → Mai multe gesturi."
+            "value" : "Dezactivează și gestul de ciupire Aplicații și gestul de depărtare pentru a afișa Desktopul din Setări sistem → Trackpad → Mai multe gesturi."
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "同时在“系统设置 → 触控板 → 更多手势”中关闭 Launchpad/应用捏合手势。"
+            "value" : "同时在“系统设置 → 触控板 → 更多手势”中关闭应用捏合手势和显示桌面张开手势。"
           }
         }
       }
@@ -781,71 +780,6 @@
         }
       }
     },
-    "Folder" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ordner"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Folder"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Carpeta"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Dossier"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Cartella"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "フォルダ"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Map"
-          }
-        },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Pasta"
-          }
-        },
-        "ro" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Dosar"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "文件夹"
-          }
-        }
-      }
-    },
     "General" : {
       "localizations" : {
         "de" : {
@@ -1162,71 +1096,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "隐藏"
-          }
-        }
-      }
-    },
-    "Hide from Launchpad" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "In Launchpad ausblenden"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Hide from Launchpad"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ocultar de Launchpad"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Masquer de Launchpad"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Nascondi da Launchpad"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Launchpadから非表示"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Verbergen in Launchpad"
-          }
-        },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ocultar do Launchpad"
-          }
-        },
-        "ro" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ascunde din Launchpad"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "从 Launchpad 中隐藏"
           }
         }
       }
@@ -1871,67 +1740,66 @@
         }
       }
     },
-    "Open Launchpad" : {
-      "extractionState" : "stale",
+    "Open Trackpad Settings" : {
       "localizations" : {
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Launchpad öffnen"
+            "value" : "Trackpad-Einstellungen öffnen"
           }
         },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Open Launchpad"
+            "value" : "Open Trackpad Settings"
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Abrir Launchpad"
+            "value" : "Abrir ajustes del Trackpad"
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ouvrir Launchpad"
+            "value" : "Ouvrir les réglages du Trackpad"
           }
         },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Apri Launchpad"
+            "value" : "Apri impostazioni Trackpad"
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Launchpadを開く"
+            "value" : "トラックパッド設定を開く"
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Launchpad openen"
+            "value" : "Trackpad-instellingen openen"
           }
         },
         "pt" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Abrir Launchpad"
+            "value" : "Abrir Definições do Trackpad"
           }
         },
         "ro" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Deschide Launchpad"
+            "value" : "Deschide setările Trackpad"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "打开 Launchpad"
+            "value" : "打开触控板设置"
           }
         }
       }
@@ -2000,67 +1868,130 @@
         }
       }
     },
-    "Pinch to open (experimental)" : {
-      "extractionState" : "stale",
+    "Pinch to open and close" : {
       "localizations" : {
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Zum Öffnen kneifen (experimentell)"
+            "value" : "Zum Öffnen und Schließen kneifen"
           }
         },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Pinch to open (experimental)"
+            "value" : "Pinch to open and close"
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Pellizcar para abrir (experimental)"
+            "value" : "Pellizcar para abrir y cerrar"
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Pincer pour ouvrir (expérimental)"
+            "value" : "Pincer pour ouvrir et fermer"
           }
         },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Pizzica per aprire (sperimentale)"
+            "value" : "Pizzica per aprire e chiudere"
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ピンチで開く（実験的）"
+            "value" : "ピンチで開閉"
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Knijpen om te openen (experimenteel)"
+            "value" : "Knijpen om te openen en te sluiten"
           }
         },
         "pt" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Pinçar para abrir (experimental)"
+            "value" : "Pinçar para abrir e fechar"
           }
         },
         "ro" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ciupire pentru a deschide (experimental)"
+            "value" : "Ciupire pentru a deschide și închide"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "捏合打开（实验性）"
+            "value" : "捏合打开和关闭"
+          }
+        }
+      }
+    },
+    "Pinch with your thumb and three fingers to open Launchpad, and spread them to close it. macOS handles these gestures too, so turn them off in Trackpad settings." : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kneife mit Daumen und drei Fingern, um Launchpad zu öffnen, und spreize sie, um es zu schließen. macOS verarbeitet diese Gesten ebenfalls, daher deaktiviere sie in den Trackpad-Einstellungen."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pinch with your thumb and three fingers to open Launchpad, and spread them to close it. macOS handles these gestures too, so turn them off in Trackpad settings."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pellizca con el pulgar y tres dedos para abrir Launchpad, y sepáralos para cerrarlo. macOS también gestiona estos gestos, así que desactívalos en los ajustes del Trackpad."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pincez avec le pouce et trois doigts pour ouvrir Launchpad, et écartez-les pour le fermer. macOS gère aussi ces gestes, donc désactivez-les dans les réglages du Trackpad."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pizzica con il pollice e tre dita per aprire Launchpad e allargale per chiuderlo. macOS gestisce anche questi gesti, quindi disattivali nelle impostazioni del Trackpad."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "親指と3本の指でピンチしてLaunchpadを開き、広げて閉じます。macOSもこれらのジェスチャを処理するため、トラックパッド設定でオフにしてください。"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Knijp met je duim en drie vingers om Launchpad te openen en spreid ze om het te sluiten. macOS verwerkt deze gebaren ook, dus schakel ze uit in de Trackpad-instellingen."
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pinçe com o polegar e três dedos para abrir o Launchpad e afaste-os para o fechar. O macOS também processa estes gestos, por isso desative-os nas definições do Trackpad."
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ciupiți cu degetul mare și trei degete pentru a deschide Launchpad și depărtați-le pentru a-l închide. macOS gestionează și aceste gesturi, așa că dezactivați-le din setările Trackpad."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "用拇指和三根手指捏合以打开 Launchpad，张开以关闭。macOS 也会处理这些手势，因此请在触控板设置中关闭它们。"
           }
         }
       }

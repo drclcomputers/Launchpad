@@ -122,6 +122,14 @@ enum AppInfo {
 	static let author = "DRCLComputers"
 }
 
+enum TrackpadSettings {
+	static func open() {
+		if let url = URL(string: "x-apple.systempreferences:com.apple.Trackpad-Settings.extension") {
+			NSWorkspace.shared.open(url)
+		}
+	}
+}
+
 func animated<R>(_ animation: Animation = .spring(response: 0.35, dampingFraction: 0.85),
 				 _ body: () throws -> R) rethrows -> R {
 	try withAnimation(NSWorkspace.shared.accessibilityDisplayShouldReduceMotion ? nil : animation, body)
@@ -130,6 +138,7 @@ func animated<R>(_ animation: Animation = .spring(response: 0.35, dampingFractio
 struct SettingsPanel: View {
 	let close: () -> Void
 	@EnvironmentObject private var store: AppStore
+	@Environment(\.dismissLaunchpad) private var dismissLaunchpad
 
 	@AppStorage(Keys.columns) private var columns = Defaults.columns
 	@AppStorage(Keys.rows) private var rows = Defaults.rows
@@ -203,12 +212,16 @@ struct SettingsPanel: View {
 						LabeledContent("Shortcut") { ShortcutField() }
 							.disabled(!hotkeyEnabled)
 						Toggle("Show in menu bar", isOn: $menuBar)
-						/*Toggle("Pinch to open (experimental)", isOn: $pinchEnabled)
+						Toggle("Pinch to open and close", isOn: $pinchEnabled)
 						if pinchEnabled {
-							Text("Also turn off the Launchpad/Apps pinch in System Settings → Trackpad → More Gestures.")
+							Text("Also turn off the Apps pinch and the Show Desktop spread in System Settings → Trackpad → More Gestures.")
 								.font(.callout)
 								.foregroundStyle(.secondary)
-						}*/
+							Button("Open Trackpad Settings") {
+								TrackpadSettings.open()
+								dismissLaunchpad()
+							}
+						}
 						Button("Quit Launchpad") { NSApp.terminate(nil) }
 					}
 

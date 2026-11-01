@@ -204,27 +204,21 @@ struct LaunchpadView: View {
 
 	private var pager: some View {
 		GeometryReader { geo in
-			ScrollView(.horizontal, showsIndicators: false) {
-				HStack(spacing: 0) {
-					ForEach(pages.indices, id: \.self) { i in
-						PageGrid(entries: pages[i],
-								 columns: columns,
-								 rows: rows,
-								 size: geo.size,
-								 reorderable: query.isEmpty,
-								 selectedID: selectedID,
-								 onOpenFolder: { openFolderID = $0 })
-							.frame(width: geo.size.width, height: geo.size.height, alignment: .top)
-							.id(i)
-					}
+			HStack(spacing: 0) {
+				ForEach(pages.indices, id: \.self) { i in
+					PageGrid(entries: pages[i],
+							 columns: columns,
+							 rows: rows,
+							 size: geo.size,
+							 reorderable: query.isEmpty,
+							 selectedID: selectedID,
+							 onOpenFolder: { openFolderID = $0 })
+						.frame(width: geo.size.width, height: geo.size.height, alignment: .top)
 				}
-				.scrollTargetLayout()
 			}
-			.scrollTargetBehavior(.paging)
-			.scrollPosition(id: Binding(
-				get: { page },
-				set: { page = $0 ?? 0 }
-			))
+			.offset(x: -CGFloat(page) * geo.size.width)
+			.frame(width: geo.size.width, height: geo.size.height, alignment: .leading)
+			.clipped()
 			.contentShape(Rectangle())
 			.onTapGesture { }
 			.onChange(of: geo.size.width, initial: true) { drag.viewWidth = geo.size.width }

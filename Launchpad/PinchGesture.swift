@@ -21,6 +21,7 @@ nonisolated final class PinchDetector: @unchecked Sendable {
 	static let shared = PinchDetector()
 
 	var onPinch: (@Sendable () -> Void)?
+	var onSpread: (@Sendable () -> Void)?
 
 	private var deviceList: CFArray?
 	private var devices: [UnsafeMutableRawPointer] = []
@@ -29,7 +30,8 @@ nonisolated final class PinchDetector: @unchecked Sendable {
 	private var stopDevice: DeviceStopFunction?
 
 	private var peakSpread: Float?
-	private var fired = false
+	private var troughSpread: Float = 0
+	private var lastCount = 0
 	private var lastFire = Date.distantPast
 
 	func start() {
@@ -80,14 +82,14 @@ nonisolated final class PinchDetector: @unchecked Sendable {
 		deviceList = nil
 		callback = nil
 		peakSpread = nil
-		fired = false
+		lastCount = 0
 	}
 
 	fileprivate func process(_ touches: UnsafeMutableRawPointer, count: Int) {
 		guard count >= 4, count <= 5 else {
 			if count < 3 {
 				peakSpread = nil
-				fired = false
+				lastCount = 0
 			}
 			return
 		}
@@ -108,21 +110,31 @@ nonisolated final class PinchDetector: @unchecked Sendable {
 		}
 		let spread = total / Float(count)
 
-		guard let peak = peakSpread else {
+		guard let peak = peakSpread, count == lastCount else {
 			peakSpread = spread
+			troughSpread = spread
+			lastCount = count
 			return
 		}
 
-		if spread > peak {
-			peakSpread = spread
-			return
-		}
+		let newPeak = max(peak, spread)
+		let newTrough = min(troughSpread, spread)
+		peakSpread = newPeak
+		troughSpread = newTrough
 
-		if !fired, peak > 0.12, spread < peak * 0.65, Date().timeIntervalSince(lastFire) > 1 {
-			fired = true
-			lastFire = Date()
-			let handler = onPinch
-			DispatchQueue.main.async { handler?() }
+		guard Date().timeIntervalSince(lastFire) > 0.3 else { return }
+
+		if newPeak > 0.12, spread < newPeak * 0.65 {
+			fire(onPinch, spread: spread)
+		} else if spread - newTrough > 0.08, spread > newTrough * 1.5 {
+			fire(onSpread, spread: spread)
 		}
+	}
+
+	private func fire(_ handler: (@Sendable () -> Void)?, spread: Float) {
+		lastFire = Date()
+		peakSpread = spread
+		troughSpread = spread
+		DispatchQueue.main.async { handler?() }
 	}
 }
