@@ -203,12 +203,12 @@ struct SettingsPanel: View {
 						LabeledContent("Shortcut") { ShortcutField() }
 							.disabled(!hotkeyEnabled)
 						Toggle("Show in menu bar", isOn: $menuBar)
-						Toggle("Pinch to open (experimental)", isOn: $pinchEnabled)
+						/*Toggle("Pinch to open (experimental)", isOn: $pinchEnabled)
 						if pinchEnabled {
 							Text("Also turn off the Launchpad/Apps pinch in System Settings → Trackpad → More Gestures.")
 								.font(.callout)
 								.foregroundStyle(.secondary)
-						}
+						}*/
 						Button("Quit Launchpad") { NSApp.terminate(nil) }
 					}
 

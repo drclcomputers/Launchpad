@@ -51,7 +51,6 @@ Apple removed Launchpad from recent versions of macOS in favor of the Apps view 
 - ✋ **Drag & drop**: reorder freely, hold a dragged app at the screen edge to flip pages
 - 🙈 **Hide apps**: right-click → *Hide from Launchpad*, restore any time in Settings
 - ⌨️ **Global shortcut**: open and close Launchpad from anywhere (<kbd>⌥</kbd><kbd>Space</kbd> by default, fully customizable)
-- 🤏 **Pinch to open** (experimental): open Launchpad with the thumb-and-three-fingers pinch instead of macOS's Apps view
 - 🖥️ **Menu bar icon**: optional, so you can see it's running and open or quit it from there
 - 🚀 **Launch at login**: starts silently in the background, ready for your shortcut
 - ⚙️ **Layout settings**: columns, rows, icon size, background dim, show or hide app names
@@ -87,7 +86,7 @@ Then select the **Launchpad** scheme and press <kbd>⌘</kbd> + <kbd>R</kbd>.
 
 | Action | How |
 |---|---|
-| Open / close Launchpad | Your global shortcut (<kbd>⌥</kbd><kbd>Space</kbd> by default), the menu bar icon, or the pinch gesture if enabled |
+| Open / close Launchpad | Your global shortcut (<kbd>⌥</kbd><kbd>Space</kbd> by default), the menu bar icon |
 | Search | Just start typing |
 | Move around the grid | Arrow keys (the page follows your selection) |
 | Launch the selected app, or open the selected folder | <kbd>Return</kbd> |
@@ -125,7 +124,6 @@ You can also turn the shortcut off completely with the **Global shortcut** switc
 | Language | System default, English, Română, Español, Français, Deutsch |
 | Global shortcut | Enable, disable and record the shortcut |
 | Show in menu bar | Show or hide the menu bar icon |
-| Pinch to open (experimental) | Open Launchpad with the thumb-and-three-fingers pinch |
 | Hidden apps | See and unhide apps you hid |
 | Reset layout | Remove all folders and custom ordering |
 | Clear launch history | Forget how often you launched each app (resets search ranking) |
@@ -145,7 +143,6 @@ You can also turn the shortcut off completely with the **Global shortcut** switc
 - **Launch at login doesn't stick:** move the app to `/Applications` and check *System Settings → General → Login Items & Extensions*.
 - **Get Info does nothing:** allow Launchpad to control Finder under *System Settings → Privacy & Security → Automation*.
 - **<kbd>,</kbd> and <kbd>.</kbd> don't flip pages:** they only work while the search field is empty and no folder is open, otherwise they are typed into the search.
-- **Pinch to open opens Apps as well:** turn off the pinch gesture in *System Settings → Trackpad → More Gestures*, otherwise macOS still handles it. The detection reads raw trackpad touches through a private macOS framework, so it may stop working after a macOS update.
 - **An app is missing:** it probably lives outside the folders listed above, or it is hidden (check *Hidden apps* in Settings).
 
 ## Project structure
