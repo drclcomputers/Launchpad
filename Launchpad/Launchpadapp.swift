@@ -17,9 +17,8 @@ struct LaunchpadApp: App {
 	var body: some Scene { Settings { EmptyView() } }
 }
 
-final class OverlayWindow: NSWindow {
+final class OverlayWindow: NSPanel {
 	override var canBecomeKey: Bool { true }
-	override var canBecomeMain: Bool { true }
 }
 
 final class AppDelegate: NSObject, NSApplicationDelegate {
@@ -28,6 +27,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
 	var window: OverlayWindow?
 	private var launchedAtLogin = false
 	private var ignoreActivationUntil = Date.distantPast
+	private var shownAt = Date.distantPast
 	private var statusItem: NSStatusItem?
 	private var appliedSignature = ""
 
@@ -92,21 +92,43 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
 			w = existing
 		} else {
 			w = OverlayWindow(contentRect: screen.frame,
-							  styleMask: [.borderless],
+							  styleMask: [.borderless, .nonactivatingPanel],
 							  backing: .buffered, defer: false)
+			w.isFloatingPanel = true
+			w.hidesOnDeactivate = false
+			w.becomesKeyOnlyIfNeeded = false
 			w.level = NSWindow.Level(rawValue: Int(CGShieldingWindowLevel()))
 			w.backgroundColor = .clear
 			w.isOpaque = false
 			w.hasShadow = false
 			w.collectionBehavior = [.canJoinAllSpaces, .fullScreenAuxiliary]
 			window = w
+
+			NotificationCenter.default.addObserver(
+				forName: NSWindow.didResignKeyNotification,
+				object: w, queue: .main
+			) { [weak self] _ in
+				MainActor.assumeIsolated { self?.closeWhenFocusLost() }
+			}
 		}
 
+		shownAt = Date()
 		w.setFrame(screen.frame, display: true)
 		w.contentView = NSHostingView(rootView: RootView())
-		NSApp.unhide(nil)
-		w.makeKeyAndOrderFront(nil)
+		if NSApp.isHidden { NSApp.unhideWithoutActivation() }
+		w.orderFrontRegardless()
+		w.makeKey()
 		NSApp.activate(ignoringOtherApps: true)
+
+		Task { @MainActor [weak w] in
+			for _ in 0..<3 {
+				try? await Task.sleep(for: .milliseconds(150))
+				guard let w, w.isVisible else { return }
+				if w.isKeyWindow { return }
+				w.makeKey()
+				NSApp.activate(ignoringOtherApps: true)
+			}
+		}
 	}
 
 	private func screenUnderCursor() -> NSScreen? {
@@ -121,11 +143,12 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
 	}
 
 	private func closeWhenFocusLost() {
-		guard window?.isVisible == true else { return }
+		guard window?.isVisible == true,
+			  Date().timeIntervalSince(shownAt) > 0.5 else { return }
 		NotificationCenter.default.post(name: .dismissLaunchpad, object: nil)
 		Task { @MainActor [weak self] in
 			try? await Task.sleep(for: .milliseconds(600))
-			guard let self, self.window?.isVisible == true, !NSApp.isActive else { return }
+			guard let self, self.window?.isVisible == true, self.window?.isKeyWindow != true else { return }
 			self.hideWindow()
 		}
 	}
