@@ -88,6 +88,8 @@ struct RootView: View {
 }
 
 enum LaunchAtLogin {
+	private static let agentLabel = "com.drclcomputers.Launchpad.autostart"
+
 	static var isEnabled: Bool { SMAppService.mainApp.status == .enabled }
 
 	static func set(_ enabled: Bool) {
@@ -99,6 +101,14 @@ enum LaunchAtLogin {
 		} catch {
 			print("Launch at login failed:", error)
 		}
+	}
+
+	static func removeAgent() {
+		let url = FileManager.default.homeDirectoryForCurrentUser
+			.appendingPathComponent("Library/LaunchAgents/\(agentLabel).plist")
+		guard FileManager.default.fileExists(atPath: url.path) else { return }
+		try? FileManager.default.removeItem(at: url)
+		set(true)
 	}
 }
 

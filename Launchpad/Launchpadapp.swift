@@ -10,6 +10,10 @@
 //
 
 import SwiftUI
+import ServiceManagement
+import os
+
+private let launchLog = Logger(subsystem: "com.drclcomputers.Launchpad", category: "launch")
 
 @main
 struct LaunchpadApp: App {
@@ -28,6 +32,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
 	private var launchedAtLogin = false
 	private var ignoreActivationUntil = Date.distantPast
 	private var shownAt = Date.distantPast
+	private var hiddenAt = Date.distantPast
 	private var statusItem: NSStatusItem?
 	private var appliedSignature = ""
 
@@ -45,14 +50,15 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
 			Keys.hotkeyLabel: Defaults.hotkeyLabel
 		])
 		launchedAtLogin = Self.shouldStartSilently()
-		if launchedAtLogin { ignoreActivationUntil = Date().addingTimeInterval(8) }
+		if launchedAtLogin { ignoreActivationUntil = Date().addingTimeInterval(20) }
 	}
 
 	func applicationDidFinishLaunching(_ notification: Notification) {
 		NSApp.setActivationPolicy(.accessory)
+		LaunchAtLogin.removeAgent()
 
 		HotKeyManager.shared.onTrigger = { [weak self] in self?.toggleWindow() }
-		PinchDetector.shared.onPinch = { Task { @MainActor in AppDelegate.shared?.showWindow() } }
+		PinchDetector.shared.onPinch = { Task { @MainActor in AppDelegate.shared?.showWindow(reason: "pinch") } }
 		PinchDetector.shared.onSpread = { Task { @MainActor in AppDelegate.shared?.closeWindow() } }
 		applySettings()
 
@@ -68,8 +74,13 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
 			object: nil, queue: .main
 		) { [weak self] _ in
 			MainActor.assumeIsolated {
-				guard let self, Date() >= self.ignoreActivationUntil else { return }
-				self.showWindow()
+				guard let self else { return }
+				guard Date() >= self.ignoreActivationUntil,
+					  Date().timeIntervalSince(self.hiddenAt) > 1 else {
+					launchLog.notice("blocked show on activation")
+					return
+				}
+				self.showWindow(reason: "activation")
 			}
 		}
 
@@ -80,10 +91,13 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
 			MainActor.assumeIsolated { self?.closeWhenFocusLost() }
 		}
 
-		if !launchedAtLogin { showWindow() }
+		let silent = launchedAtLogin
+		launchLog.notice("launched silent=\(silent)")
+		if !launchedAtLogin { showWindow(reason: "launch") }
 	}
 
-	func showWindow() {
+	func showWindow(reason: String = "unknown") {
+		launchLog.notice("show reason=\(reason, privacy: .public)")
 		guard let screen = screenUnderCursor() else { return }
 		if let w = window, w.isVisible { return }
 
@@ -137,6 +151,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
 	}
 
 	func hideWindow() {
+		hiddenAt = Date()
 		window?.orderOut(nil)
 		window?.contentView = nil
 		if NSApp.isActive { NSApp.hide(nil) }
@@ -163,12 +178,16 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
 		if window?.isVisible == true {
 			NotificationCenter.default.post(name: .dismissLaunchpad, object: nil)
 		} else {
-			showWindow()
+			showWindow(reason: "hotkey")
 		}
 	}
 
 	func applicationShouldHandleReopen(_ sender: NSApplication, hasVisibleWindows flag: Bool) -> Bool {
-		showWindow()
+		guard Date() >= ignoreActivationUntil else {
+			launchLog.notice("blocked show on reopen")
+			return true
+		}
+		showWindow(reason: "reopen")
 		return true
 	}
 
@@ -220,7 +239,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
 		statusItem = nil
 	}
 
-	@objc private func openFromMenu() { showWindow() }
+	@objc private func openFromMenu() { showWindow(reason: "menu") }
 
 	@objc private func quitFromMenu() { NSApp.terminate(nil) }
 
@@ -230,9 +249,12 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
 		let previous = defaults.string(forKey: Keys.lastSession)
 		defaults.set(token, forKey: Keys.lastSession)
 
-		guard defaults.bool(forKey: Keys.onboarded) else { return false }
-		let loginItem = LaunchAtLogin.isEnabled || defaults.bool(forKey: Keys.launchAtLogin)
-		return loginItem && token != previous
+		let onboarded = defaults.bool(forKey: Keys.onboarded)
+		let status = SMAppService.mainApp.status
+		let loginItem = status == .enabled || defaults.bool(forKey: Keys.launchAtLogin)
+		let silent = onboarded && loginItem && token != previous
+		launchLog.notice("silent=\(silent) onboarded=\(onboarded) loginItem=\(loginItem) status=\(status.rawValue) token=\(token, privacy: .public) previous=\(previous ?? "nil", privacy: .public)")
+		return silent
 	}
 
 	private static func sessionToken() -> String {
@@ -241,6 +263,10 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
 		sysctlbyname("kern.boottime", &boot, &size, nil, 0)
 		let dictionary = CGSessionCopyCurrentDictionary() as? [String: Any]
 		let session = (dictionary?["kCGSSessionIDKey"] as? Int).map(String.init) ?? "none"
-		return "\(boot.tv_sec)-\(session)"
+		let audit = (dictionary?["kCGSSessionAuditIDKey"] as? Int).map(String.init) ?? "none"
+		let loginWindow = NSRunningApplication.runningApplications(withBundleIdentifier: "com.apple.loginwindow")
+			.compactMap(\.launchDate).max()
+			.map { String(Int($0.timeIntervalSince1970)) } ?? "none"
+		return "\(boot.tv_sec)-\(session)-\(audit)-\(loginWindow)"
 	}
 }
