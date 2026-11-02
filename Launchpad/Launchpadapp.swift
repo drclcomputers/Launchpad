@@ -27,6 +27,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
 
 	var window: OverlayWindow?
 	private var launchedAtLogin = false
+	private var ignoreActivationUntil = Date.distantPast
 	private var statusItem: NSStatusItem?
 	private var appliedSignature = ""
 
@@ -43,7 +44,8 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
 			Keys.hotkeyMods: Defaults.hotkeyMods,
 			Keys.hotkeyLabel: Defaults.hotkeyLabel
 		])
-		launchedAtLogin = Self.wasLaunchedAsLoginItem()
+		launchedAtLogin = Self.shouldStartSilently()
+		if launchedAtLogin { ignoreActivationUntil = Date().addingTimeInterval(8) }
 	}
 
 	func applicationDidFinishLaunching(_ notification: Notification) {
@@ -65,7 +67,17 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
 			forName: NSApplication.didBecomeActiveNotification,
 			object: nil, queue: .main
 		) { [weak self] _ in
-			MainActor.assumeIsolated { self?.showWindow() }
+			MainActor.assumeIsolated {
+				guard let self, Date() >= self.ignoreActivationUntil else { return }
+				self.showWindow()
+			}
+		}
+
+		NotificationCenter.default.addObserver(
+			forName: NSApplication.didResignActiveNotification,
+			object: nil, queue: .main
+		) { [weak self] _ in
+			MainActor.assumeIsolated { self?.closeWhenFocusLost() }
 		}
 
 		if !launchedAtLogin { showWindow() }
@@ -106,6 +118,16 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
 		window?.orderOut(nil)
 		window?.contentView = nil
 		if NSApp.isActive { NSApp.hide(nil) }
+	}
+
+	private func closeWhenFocusLost() {
+		guard window?.isVisible == true else { return }
+		NotificationCenter.default.post(name: .dismissLaunchpad, object: nil)
+		Task { @MainActor [weak self] in
+			try? await Task.sleep(for: .milliseconds(600))
+			guard let self, self.window?.isVisible == true, !NSApp.isActive else { return }
+			self.hideWindow()
+		}
 	}
 
 	func closeWindow() {
@@ -179,10 +201,23 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
 
 	@objc private func quitFromMenu() { NSApp.terminate(nil) }
 
-	private static func wasLaunchedAsLoginItem() -> Bool {
-		guard let event = NSAppleEventManager.shared().currentAppleEvent else { return false }
-		return event.eventID == AEEventID(kAEOpenApplication) &&
-			event.paramDescriptor(forKeyword: AEKeyword(keyAEPropData))?.enumCodeValue
-				== AEKeyword(keyAELaunchedAsLogInItem)
+	private static func shouldStartSilently() -> Bool {
+		let defaults = UserDefaults.standard
+		let token = sessionToken()
+		let previous = defaults.string(forKey: Keys.lastSession)
+		defaults.set(token, forKey: Keys.lastSession)
+
+		guard defaults.bool(forKey: Keys.onboarded) else { return false }
+		let loginItem = LaunchAtLogin.isEnabled || defaults.bool(forKey: Keys.launchAtLogin)
+		return loginItem && token != previous
+	}
+
+	private static func sessionToken() -> String {
+		var boot = timeval()
+		var size = MemoryLayout<timeval>.stride
+		sysctlbyname("kern.boottime", &boot, &size, nil, 0)
+		let dictionary = CGSessionCopyCurrentDictionary() as? [String: Any]
+		let session = (dictionary?["kCGSSessionIDKey"] as? Int).map(String.init) ?? "none"
+		return "\(boot.tv_sec)-\(session)"
 	}
 }

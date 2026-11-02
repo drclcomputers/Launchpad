@@ -1,4 +1,4 @@
-# <div align="center">
+<div align="center">
 
 # Launchpad
 
@@ -51,10 +51,10 @@ Apple removed Launchpad from recent versions of macOS in favor of the Apps view 
 - ✋ **Drag & drop**: reorder freely, hold a dragged app at the screen edge to flip pages
 - 🙈 **Hide apps**: right-click → *Hide from Launchpad*, restore any time in Settings
 - ⌨️ **Global shortcut**: open and close Launchpad from anywhere (<kbd>⌥</kbd><kbd>Space</kbd> by default, fully customizable)
-- 🤏 **Pinch to open/close**: open/close Launchpad with the thumb-and-three-fingers pinch instead of macOS's Apps or Show Desktop gestures
+- 🤏 **Pinch to open and close**: pinch with your thumb and three fingers to open Launchpad, spread them to close it
 - 👋 **First-run guide**: a short tutorial on the first launch that also helps you set your shortcut and pinch gesture
 - 🖥️ **Menu bar icon**: optional, so you can see it's running and open or quit it from there
-- 🚀 **Launch at login**: starts at launch, ready to open anytime
+- 🚀 **Launch at login**: starts hidden in the background (look for the menu bar icon), ready for your shortcut
 - ⚙️ **Layout settings**: columns, rows, icon size, background dim, show or hide app names
 - 🌍 **Multilingual**: English, Română, Español, Français, Deutsch, Italiano, Nederlands, Português, 日本語, 简体中文, switchable in the app
 - 🖱️ **Trackpad, Magic Mouse and wheel mouse**: swipe, scroll or click through pages
@@ -72,7 +72,7 @@ Apple removed Launchpad from recent versions of macOS in favor of the Apps view 
 
 Grab the latest build from the [Releases](https://github.com/drclcomputers/Launchpad/releases) page, unzip it, and drag **Launchpad.app** into your `/Applications` folder.
 
-> Builds are not signed or notarized, so macOS blocks the first launch. Right-click the app and choose **Open**, or run `xattr -cr /Applications/Launchpad.app` once.
+> Builds are not signed or notarized (that needs a paid Apple Developer account), so macOS blocks the first launch. Right-click the app and choose **Open**, or run `xattr -cr /Applications/Launchpad.app` once.
 
 ### Build from source
 
@@ -88,7 +88,7 @@ Then select the **Launchpad** scheme and press <kbd>⌘</kbd> + <kbd>R</kbd>.
 
 | Action | How |
 |---|---|
-| Open / close Launchpad | Your global shortcut (<kbd>⌥</kbd><kbd>Space</kbd> by default), the menu bar icon, or the pinch gesture if enabled |
+| Open / close Launchpad | Your global shortcut (<kbd>⌥</kbd><kbd>Space</kbd> by default), the menu bar icon, or the pinch and spread gestures if enabled |
 | Search | Just start typing |
 | Move around the grid | Arrow keys (the page follows your selection) |
 | Launch the selected app, or open the selected folder | <kbd>Return</kbd> |
@@ -100,7 +100,7 @@ Then select the **Launchpad** scheme and press <kbd>⌘</kbd> + <kbd>R</kbd>.
 | Take an app out of a folder | Drag it outside the folder panel, or right-click → *Remove from Folder* |
 | Hide an app | Right-click → *Hide from Launchpad* |
 | Open Settings | Gear button next to the search bar |
-| Close | <kbd>Esc</kbd> (closes Settings or a folder first) or click the background |
+| Close | <kbd>Esc</kbd> (closes Settings or a folder first), click the background, spread your fingers if the gesture is on, or switch to another app |
 
 ## Keyboard shortcut
 
@@ -116,15 +116,15 @@ You can also turn the shortcut off completely with the **Global shortcut** switc
 
 The first time you open Launchpad, a short guide walks you through the basics and lets you set the shortcut. You can replay it any time from **Settings → About → Show welcome guide**.
 
-## Pinch to open (optional)
+## Pinch to open and close (optional)
 
-Open Launchpad with the thumb-and-three-fingers pinch, the same gesture macOS uses for its own Apps view.
+Pinch with your thumb and three fingers to open Launchpad, the same gesture macOS uses for its own Apps view. Spread the same fingers apart to close it again.
 
-1. Turn it on in the welcome guide, or later in **Settings → Shortcut & menu bar → Pinch to open**.
-2. Turn off the system pinch so macOS doesn't open its own Apps view or Shows the Desktop as well. Click **Open Trackpad Settings** (in the guide or in Settings), then under *More Gestures* switch off the Apps and Show Desktop pinch.
-3. Pinch with your thumb and three fingers on the trackpad.
+1. Turn it on in the welcome guide, or later in **Settings → Shortcut & menu bar → Pinch to open and close**.
+2. Turn off the system gestures so macOS doesn't react as well. Click **Open Trackpad Settings** (in the guide or in Settings), then under *More Gestures* switch off the Apps pinch and the **Show Desktop** spread.
+3. Pinch to open, spread to close.
 
-> Launchpad cannot intercept the system gesture, so it detects the pinch itself while you turn macOS's version off. The detection reads raw trackpad touches through a private macOS framework. That is why Launchpad is **not sandboxed**, and why it may stop working after a macOS update. It works with trackpads only (built-in or Magic Trackpad).
+> Launchpad cannot intercept the system gestures, so it detects them itself while you turn macOS's versions off. The detection reads raw trackpad touches through a private macOS framework. That is why Launchpad is **not sandboxed**, and why it may stop working after a macOS update. It works with trackpads only (built-in or Magic Trackpad).
 
 ## Settings
 
@@ -134,11 +134,11 @@ Open Launchpad with the thumb-and-three-fingers pinch, the same gesture macOS us
 | Icon size | Icon size, automatically capped so everything fits your screen |
 | Show app names | Show or hide the labels under icons |
 | Background dim | How dark the overlay behind the grid is |
-| Launch at login | Start Launchpad in the background when you log in |
+| Launch at login | Start Launchpad hidden in the background when you log in. Launching it yourself later shows it as usual |
 | Language | System default, English, Română, Español, Français, Deutsch, Italiano, Nederlands, Português, 日本語, 简体中文 |
 | Global shortcut | Enable, disable and record the shortcut |
 | Show in menu bar | Show or hide the menu bar icon |
-| Pinch to open/close | Open/Close Launchpad with the thumb-and-three-fingers pinch, with a button that opens Trackpad settings so you can turn off macOS's own pinch |
+| Pinch to open and close | Pinch to open, spread to close, with a button that opens Trackpad settings so you can turn off macOS's own gestures |
 | Hidden apps | See and unhide apps you hid |
 | Reset layout | Remove all folders and custom ordering |
 | Clear launch history | Forget how often you launched each app (resets search ranking) |
@@ -151,17 +151,18 @@ Open Launchpad with the thumb-and-three-fingers pinch, the same gesture macOS us
 - Apps are read from `/Applications`, `/System/Applications` and `~/Applications` (including one level of subfolders such as `Utilities`), and the list is refreshed every time you open Launchpad.
 - Your layout, hidden apps, settings and launch counts are stored locally in the app's preferences. Nothing leaves your Mac.
 - A dot under an icon means the app is running. It is read when Launchpad opens.
+- Launchpad closes by itself when another app comes to the front (for example with <kbd>⌘</kbd><kbd>Tab</kbd>), so it never stays on screen without keyboard focus.
 - Launchpad is **not sandboxed**: reading raw trackpad touches for the pinch gesture is not possible inside the App Sandbox. It still makes no network connections.
 
 ## Troubleshooting
 
 - **The shortcut does nothing or clashes with another app:** record a different combination in Settings.
+- **Launchpad doesn't appear when I launch it right after logging in:** with Launch at login on, the first start of each login session stays hidden. Press your shortcut or use the menu bar icon.
 - **Launch at login doesn't stick:** move the app to `/Applications` and check *System Settings → General → Login Items & Extensions*.
 - **Get Info does nothing:** allow Launchpad to control Finder under *System Settings → Privacy & Security → Automation*.
 - **<kbd>,</kbd> and <kbd>.</kbd> don't flip pages:** they only work while the search field is empty and no folder is open, otherwise they are typed into the search.
 - **Pinch to open does nothing:** make sure the switch is on in Settings, that you are using a trackpad, and that the app is really unsandboxed (`codesign -d --entitlements - /Applications/Launchpad.app` should not list `app-sandbox`).
-- **Pinch to open also opens Apps:** turn off the Apps pinch in *System Settings → Trackpad → More Gestures*. The **Open Trackpad Settings** button takes you there.
-- **Pinch to close also Shows the Desktop:** turn off the Show Desktop pinch in *System Settings → Trackpad → More Gestures*. The **Open Trackpad Settings** button takes you there.
+- **Pinch also opens Apps, or spreading shows the desktop:** turn off the Apps pinch and the Show Desktop spread in *System Settings → Trackpad → More Gestures*. The **Open Trackpad Settings** button takes you there.
 - **An app is missing:** it probably lives outside the folders listed above, or it is hidden (check *Hidden apps* in Settings).
 
 ## Project structure
@@ -189,4 +190,4 @@ Released under the [MIT License](LICENSE).
 
 ## Acknowledgements
 
-Inspired by Apple's original Launchpad. This project is not affiliated with or endorsed by Apple Inc.
+Inspired by Apple's original Launchpad. This project is not affiliated with or endorsed by Apple Inc. 

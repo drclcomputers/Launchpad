@@ -1,3282 +1,3413 @@
 {
-  "sourceLanguage" : "en",
-  "strings" : {
-    "" : {
-      "localizations" : {
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : ""
+  "sourceLanguage": "en",
+  "strings": {
+    "": {
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": ""
           }
         }
       },
-      "shouldTranslate" : false
+      "shouldTranslate": false
     },
-    "About" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Über"
+    "About": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Über"
           }
         },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "About"
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "About"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Acerca de"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Acerca de"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "À propos"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "À propos"
           }
         },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Informazioni"
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Informazioni"
           }
         },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "について"
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "について"
           }
         },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Over"
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Over"
           }
         },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sobre"
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sobre"
           }
         },
-        "ro" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Despre"
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Despre"
           }
         },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "关于"
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "关于"
           }
         }
       }
     },
-    "All your apps in one place. Click an app to open it, or just start typing to search. Return opens the best match." : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Alle deine Apps an einem Ort. Klicke auf eine App, um sie zu öffnen, oder tippe einfach, um zu suchen. Return öffnet den besten Treffer."
+    "All your apps in one place. Click an app to open it, or just start typing to search. Return opens the best match.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Alle deine Apps an einem Ort. Klicke auf eine App, um sie zu öffnen, oder tippe einfach, um zu suchen. Return öffnet den besten Treffer."
           }
         },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "All your apps in one place. Click an app to open it, or just start typing to search. Return opens the best match."
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "All your apps in one place. Click an app to open it, or just start typing to search. Return opens the best match."
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Todas tus apps en un solo lugar. Haz clic en una app para abrirla, o empieza a escribir para buscar. Retorno abre la mejor coincidencia."
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Todas tus apps en un solo lugar. Haz clic en una app para abrirla, o empieza a escribir para buscar. Retorno abre la mejor coincidencia."
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Toutes vos apps au même endroit. Cliquez sur une app pour l’ouvrir, ou commencez simplement à taper pour rechercher. Retour ouvre la meilleure correspondance."
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Toutes vos apps au même endroit. Cliquez sur une app pour l’ouvrir, ou commencez simplement à taper pour rechercher. Retour ouvre la meilleure correspondance."
           }
         },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Tutte le tue app in un unico posto. Fai clic su un’app per aprirla, oppure inizia a digitare per cercare. Invio apre la corrispondenza migliore."
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tutte le tue app in un unico posto. Fai clic su un’app per aprirla, oppure inizia a digitare per cercare. Invio apre la corrispondenza migliore."
           }
         },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "すべてのアプリをひとつの場所に。アプリをクリックして開くか、入力を始めて検索します。Returnキーで最適な一致を開きます。"
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "すべてのアプリをひとつの場所に。アプリをクリックして開くか、入力を始めて検索します。Returnキーで最適な一致を開きます。"
           }
         },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Al je apps op één plek. Klik op een app om deze te openen, of begin gewoon te typen om te zoeken. Return opent de beste match."
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Al je apps op één plek. Klik op een app om deze te openen, of begin gewoon te typen om te zoeken. Return opent de beste match."
           }
         },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Todas as suas apps num só lugar. Clique numa app para a abrir, ou comece a escrever para pesquisar. Return abre a melhor correspondência."
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Todas as suas apps num só lugar. Clique numa app para a abrir, ou comece a escrever para pesquisar. Return abre a melhor correspondência."
           }
         },
-        "ro" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Toate aplicațiile tale într-un singur loc. Dă clic pe o aplicație pentru a o deschide, sau începe să tastezi pentru a căuta. Return deschide cea mai bună potrivire."
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Toate aplicațiile tale într-un singur loc. Dă clic pe o aplicație pentru a o deschide, sau începe să tastezi pentru a căuta. Return deschide cea mai bună potrivire."
           }
         },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "所有应用集中在一处。点击应用即可打开，或直接开始输入进行搜索。按回车键打开最佳匹配项。"
-          }
-        }
-      }
-    },
-    "Also turn off the Apps pinch and the Show Desktop spread in System Settings → Trackpad → More Gestures." : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Deaktiviere auch die Apps-Geste und die Schreibtisch-Spreizgeste unter Systemeinstellungen → Trackpad → Weitere Gesten."
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Also turn off the Apps pinch and the Show Desktop spread in System Settings → Trackpad → More Gestures."
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "También desactiva el pellizco de Apps y el gesto de separar para mostrar el escritorio en Ajustes del sistema → Trackpad → Más gestos."
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Désactivez également le pincement Apps et l’écartement Afficher le bureau dans Réglages système → Trackpad → Autres gestes."
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Disattiva anche il pinch di App e il gesto di allargamento per mostrare il Desktop in Impostazioni di sistema → Trackpad → Altri gesti."
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "システム設定 → トラックパッド → その他のジェスチャで、Appsのピンチとデスクトップを表示するスプレッドもオフにしてください。"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Schakel ook de Apps-pinch en de Bureaublad tonen-spreiding uit in Systeeminstellingen → Trackpad → Meer gebaren."
-          }
-        },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Desative também o pinça de Apps e o gesto de afastar para mostrar o ambiente de trabalho em Definições do Sistema → Trackpad → Mais Gestos."
-          }
-        },
-        "ro" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Dezactivează și gestul de ciupire Aplicații și gestul de depărtare pentru a afișa Desktopul din Setări sistem → Trackpad → Mai multe gesturi."
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "同时在“系统设置 → 触控板 → 更多手势”中关闭应用捏合手势和显示桌面张开手势。"
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "所有应用集中在一处。点击应用即可打开，或直接开始输入进行搜索。按回车键打开最佳匹配项。"
           }
         }
       }
     },
-    "Author" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Autor"
+    "Also turn off the Apps pinch and the Show Desktop spread in System Settings → Trackpad → More Gestures.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Deaktiviere auch die Apps-Geste und die Schreibtisch-Spreizgeste unter Systemeinstellungen → Trackpad → Weitere Gesten."
           }
         },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Author"
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Also turn off the Apps pinch and the Show Desktop spread in System Settings → Trackpad → More Gestures."
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Autor"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "También desactiva el pellizco de Apps y el gesto de separar para mostrar el escritorio en Ajustes del sistema → Trackpad → Más gestos."
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Auteur"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Désactivez également le pincement Apps et l’écartement Afficher le bureau dans Réglages système → Trackpad → Autres gestes."
           }
         },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Autore"
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Disattiva anche il pinch di App e il gesto di allargamento per mostrare il Desktop in Impostazioni di sistema → Trackpad → Altri gesti."
           }
         },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "作者"
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "システム設定 → トラックパッド → その他のジェスチャで、Appsのピンチとデスクトップを表示するスプレッドもオフにしてください。"
           }
         },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Auteur"
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Schakel ook de Apps-pinch en de Bureaublad tonen-spreiding uit in Systeeminstellingen → Trackpad → Meer gebaren."
           }
         },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Autor"
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Desative também o pinça de Apps e o gesto de afastar para mostrar o ambiente de trabalho em Definições do Sistema → Trackpad → Mais Gestos."
           }
         },
-        "ro" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Autor"
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dezactivează și gestul de ciupire Aplicații și gestul de depărtare pentru a afișa Desktopul din Setări sistem → Trackpad → Mai multe gesturi."
           }
         },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "作者"
-          }
-        }
-      }
-    },
-    "Back" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Zurück"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Back"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Atrás"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Retour"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Indietro"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "戻る"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Terug"
-          }
-        },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Voltar"
-          }
-        },
-        "ro" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Înapoi"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "返回"
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "同时在“系统设置 → 触控板 → 更多手势”中关闭应用捏合手势和显示桌面张开手势。"
           }
         }
       }
     },
-    "Background dim" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Hintergrund abdunkeln"
+    "Author": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Autor"
           }
         },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Background dim"
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Author"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Atenuación del fondo"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Autor"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Assombrissement du fond"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Auteur"
           }
         },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Oscuramento dello sfondo"
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Autore"
           }
         },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "背景を暗くする"
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "作者"
           }
         },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Achtergrond dimmen"
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Auteur"
           }
         },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Escurecimento do fundo"
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Autor"
           }
         },
-        "ro" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Întunecare fundal"
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Autor"
           }
         },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "背景变暗"
-          }
-        }
-      }
-    },
-    "Cancel" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Abbrechen"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Cancel"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Cancelar"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Annuler"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Annulla"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "キャンセル"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Annuleren"
-          }
-        },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Cancelar"
-          }
-        },
-        "ro" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Anulează"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "取消"
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "作者"
           }
         }
       }
     },
-    "Choose a shortcut to open and close Launchpad from any app. You can change it later in Settings." : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Wähle einen Kurzbefehl, um Launchpad aus jeder App zu öffnen und zu schließen. Du kannst ihn später in den Einstellungen ändern."
+    "Back": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zurück"
           }
         },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Choose a shortcut to open and close Launchpad from any app. You can change it later in Settings."
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Back"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Elige un atajo para abrir y cerrar Launchpad desde cualquier app. Puedes cambiarlo más tarde en Ajustes."
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Atrás"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Choisissez un raccourci pour ouvrir et fermer Launchpad depuis n’importe quelle app. Vous pourrez le modifier plus tard dans Réglages."
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Retour"
           }
         },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Scegli una scorciatoia per aprire e chiudere Launchpad da qualsiasi app. Puoi modificarla in seguito nelle Impostazioni."
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Indietro"
           }
         },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "どのアプリからでもLaunchpadを開閉できるショートカットを選択してください。後で設定で変更できます。"
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "戻る"
           }
         },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Kies een sneltoets om Launchpad vanuit elke app te openen en te sluiten. Je kunt deze later wijzigen in Instellingen."
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Terug"
           }
         },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Escolha um atalho para abrir e fechar o Launchpad a partir de qualquer app. Pode alterá-lo mais tarde nas Definições."
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Voltar"
           }
         },
-        "ro" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Alege o comandă rapidă pentru a deschide și închide Launchpad din orice aplicație. O poți schimba mai târziu în Setări."
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Înapoi"
           }
         },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "选择一个快捷键，以便从任何应用中打开和关闭 Launchpad。稍后可在设置中更改。"
-          }
-        }
-      }
-    },
-    "Clear launch history" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Startverlauf löschen"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Clear launch history"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Borrar historial de aperturas"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Effacer l'historique des lancements"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Cancella cronologia di avvio"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "起動履歴を消去"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Startgeschiedenis wissen"
-          }
-        },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Limpar histórico de lançamentos"
-          }
-        },
-        "ro" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Șterge istoricul lansărilor"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "清除启动历史"
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "返回"
           }
         }
       }
     },
-    "Columns" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Spalten"
+    "Background dim": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hintergrund abdunkeln"
           }
         },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Columns"
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Background dim"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Columnas"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Atenuación del fondo"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Colonnes"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Assombrissement du fond"
           }
         },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Colonne"
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Oscuramento dello sfondo"
           }
         },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "列"
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "背景を暗くする"
           }
         },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Kolommen"
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Achtergrond dimmen"
           }
         },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Colunas"
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Escurecimento do fundo"
           }
         },
-        "ro" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Coloane"
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Întunecare fundal"
           }
         },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "列"
-          }
-        }
-      }
-    },
-    "Done" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Fertig"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Done"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Listo"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "OK"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Fine"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "完了"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Gereed"
-          }
-        },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Concluído"
-          }
-        },
-        "ro" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Gata"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "完成"
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "背景变暗"
           }
         }
       }
     },
-    "Drag an app onto another to make a folder. Drop it on the side of an app to reorder. Right-click to hide an app." : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ziehe eine App auf eine andere, um einen Ordner zu erstellen. Lege sie seitlich an eine App ab, um die Reihenfolge zu ändern. Rechtsklick, um eine App auszublenden."
+    "Cancel": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Abbrechen"
           }
         },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Drag an app onto another to make a folder. Drop it on the side of an app to reorder. Right-click to hide an app."
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cancel"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Arrastra una app sobre otra para crear una carpeta. Suéltala al lado de una app para reordenar. Clic derecho para ocultar una app."
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cancelar"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Faites glisser une app sur une autre pour créer un dossier. Déposez-la sur le côté d’une app pour réorganiser. Clic droit pour masquer une app."
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Annuler"
           }
         },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Trascina un’app su un’altra per creare una cartella. Rilasciala sul lato di un’app per riordinare. Clic destro per nascondere un’app."
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Annulla"
           }
         },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "アプリを別のアプリの上にドラッグしてフォルダを作成します。アプリの横にドロップして並べ替えます。右クリックでアプリを非表示にします。"
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "キャンセル"
           }
         },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sleep een app op een andere om een map te maken. Zet hem naast een app neer om de volgorde te wijzigen. Rechtermuisklik om een app te verbergen."
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Annuleren"
           }
         },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Arraste uma app para cima de outra para criar uma pasta. Solte-a ao lado de uma app para reordenar. Clique com o botão direito para ocultar uma app."
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cancelar"
           }
         },
-        "ro" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Trage o aplicație peste alta pentru a crea un dosar. Las-o pe laterala unei aplicații pentru a reordona. Clic dreapta pentru a ascunde o aplicație."
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Anulează"
           }
         },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "将一个应用拖到另一个应用上即可创建文件夹。拖到应用侧面可重新排序。右键单击可隐藏应用。"
-          }
-        }
-      }
-    },
-    "General" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Allgemein"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "General"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "General"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Général"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Generale"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "一般"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Algemeen"
-          }
-        },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Geral"
-          }
-        },
-        "ro" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "General"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "通用"
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "取消"
           }
         }
       }
     },
-    "Get Info" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Informationen"
+    "Choose a shortcut to open and close Launchpad from any app. You can change it later in Settings.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wähle einen Kurzbefehl, um Launchpad aus jeder App zu öffnen und zu schließen. Du kannst ihn später in den Einstellungen ändern."
           }
         },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Get Info"
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Choose a shortcut to open and close Launchpad from any app. You can change it later in Settings."
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Obtener información"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Elige un atajo para abrir y cerrar Launchpad desde cualquier app. Puedes cambiarlo más tarde en Ajustes."
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Lire les informations"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Choisissez un raccourci pour ouvrir et fermer Launchpad depuis n’importe quelle app. Vous pourrez le modifier plus tard dans Réglages."
           }
         },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ottieni informazioni"
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Scegli una scorciatoia per aprire e chiudere Launchpad da qualsiasi app. Puoi modificarla in seguito nelle Impostazioni."
           }
         },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "情報を見る"
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "どのアプリからでもLaunchpadを開閉できるショートカットを選択してください。後で設定で変更できます。"
           }
         },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Toon info"
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kies een sneltoets om Launchpad vanuit elke app te openen en te sluiten. Je kunt deze later wijzigen in Instellingen."
           }
         },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Obter informações"
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Escolha um atalho para abrir e fechar o Launchpad a partir de qualquer app. Pode alterá-lo mais tarde nas Definições."
           }
         },
-        "ro" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Informații"
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Alege o comandă rapidă pentru a deschide și închide Launchpad din orice aplicație. O poți schimba mai târziu în Setări."
           }
         },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "显示简介"
-          }
-        }
-      }
-    },
-    "Global shortcut" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Globaler Tastaturkurzbefehl"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Global shortcut"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Atajo global"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Raccourci global"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Scorciatoia globale"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "グローバルショートカット"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Globale sneltoets"
-          }
-        },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Atalho global"
-          }
-        },
-        "ro" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Comandă rapidă globală"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "全局快捷键"
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "选择一个快捷键，以便从任何应用中打开和关闭 Launchpad。稍后可在设置中更改。"
           }
         }
       }
     },
-    "Hidden apps" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ausgeblendete Apps"
+    "Clear launch history": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Startverlauf löschen"
           }
         },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Hidden apps"
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Clear launch history"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Apps ocultas"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Borrar historial de aperturas"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Apps masquées"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Effacer l'historique des lancements"
           }
         },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "App nascoste"
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cancella cronologia di avvio"
           }
         },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "非表示のアプリ"
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "起動履歴を消去"
           }
         },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Verborgen apps"
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Startgeschiedenis wissen"
           }
         },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Apps ocultas"
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Limpar histórico de lançamentos"
           }
         },
-        "ro" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Aplicații ascunse"
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Șterge istoricul lansărilor"
           }
         },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "已隐藏的应用"
-          }
-        }
-      }
-    },
-    "Hide" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ausblenden"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Hide"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ocultar"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Masquer"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Nascondi"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "非表示"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Verbergen"
-          }
-        },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ocultar"
-          }
-        },
-        "ro" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ascunde"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "隐藏"
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "清除启动历史"
           }
         }
       }
     },
-    "Icon size" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Symbolgröße"
+    "Columns": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Spalten"
           }
         },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Icon size"
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Columns"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Tamaño de los iconos"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Columnas"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Taille des icônes"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Colonnes"
           }
         },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Dimensione delle icone"
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Colonne"
           }
         },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "アイコンサイズ"
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "列"
           }
         },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Pictogramgrootte"
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kolommen"
           }
         },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Tamanho dos ícones"
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Colunas"
           }
         },
-        "ro" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Dimensiunea pictogramelor"
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Coloane"
           }
         },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "图标大小"
-          }
-        }
-      }
-    },
-    "Language" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sprache"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Language"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Idioma"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Langue"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Lingua"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "言語"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Taal"
-          }
-        },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Idioma"
-          }
-        },
-        "ro" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Limbă"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "语言"
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "列"
           }
         }
       }
     },
-    "Launch at login" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Beim Anmelden öffnen"
+    "Done": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fertig"
           }
         },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Launch at login"
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Done"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Abrir al iniciar sesión"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Listo"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ouvrir à la connexion"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "OK"
           }
         },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Apri all’accesso"
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fine"
           }
         },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "ログイン時に起動"
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "完了"
           }
         },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Starten bij inloggen"
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gereed"
           }
         },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Abrir ao iniciar sessão"
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Concluído"
           }
         },
-        "ro" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Pornește la autentificare"
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gata"
           }
         },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "登录时启动"
-          }
-        }
-      }
-    },
-    "Launchpad keeps running in the background. Use the menu bar icon to open or quit it." : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Launchpad läuft im Hintergrund weiter. Nutze das Menüleistensymbol, um es zu öffnen oder zu beenden."
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Launchpad keeps running in the background. Use the menu bar icon to open or quit it."
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Launchpad sigue ejecutándose en segundo plano. Usa el icono de la barra de menús para abrirlo o salir."
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Launchpad continue de s’exécuter en arrière-plan. Utilisez l’icône de la barre des menus pour l’ouvrir ou le quitter."
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Launchpad continua a funzionare in background. Usa l’icona nella barra dei menu per aprirlo o chiuderlo."
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Launchpadはバックグラウンドで動作し続けます。メニューバーのアイコンを使って開いたり終了したりできます。"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Launchpad blijft op de achtergrond actief. Gebruik het menubalkpictogram om het te openen of te stoppen."
-          }
-        },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "O Launchpad continua a ser executado em segundo plano. Utilize o ícone da barra de menus para o abrir ou sair."
-          }
-        },
-        "ro" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Launchpad rulează în continuare în fundal. Folosește pictograma din bara de meniu pentru a-l deschide sau închide."
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Launchpad 会在后台继续运行。使用菜单栏图标打开或退出。"
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "完成"
           }
         }
       }
     },
-    "Layout" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Layout"
+    "Drag an app onto another to make a folder. Drop it on the side of an app to reorder. Right-click to hide an app.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ziehe eine App auf eine andere, um einen Ordner zu erstellen. Lege sie seitlich an eine App ab, um die Reihenfolge zu ändern. Rechtsklick, um eine App auszublenden."
           }
         },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Layout"
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Drag an app onto another to make a folder. Drop it on the side of an app to reorder. Right-click to hide an app."
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Diseño"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Arrastra una app sobre otra para crear una carpeta. Suéltala al lado de una app para reordenar. Clic derecho para ocultar una app."
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Disposition"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Faites glisser une app sur une autre pour créer un dossier. Déposez-la sur le côté d’une app pour réorganiser. Clic droit pour masquer une app."
           }
         },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Layout"
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Trascina un’app su un’altra per creare una cartella. Rilasciala sul lato di un’app per riordinare. Clic destro per nascondere un’app."
           }
         },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "レイアウト"
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "アプリを別のアプリの上にドラッグしてフォルダを作成します。アプリの横にドロップして並べ替えます。右クリックでアプリを非表示にします。"
           }
         },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Indeling"
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sleep een app op een andere om een map te maken. Zet hem naast een app neer om de volgorde te wijzigen. Rechtermuisklik om een app te verbergen."
           }
         },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Disposição"
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Arraste uma app para cima de outra para criar uma pasta. Solte-a ao lado de uma app para reordenar. Clique com o botão direito para ocultar uma app."
           }
         },
-        "ro" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Aranjare"
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Trage o aplicație peste alta pentru a crea un dosar. Las-o pe laterala unei aplicații pentru a reordona. Clic dreapta pentru a ascunde o aplicație."
           }
         },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "布局"
-          }
-        }
-      }
-    },
-    "Move with the keyboard" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Mit der Tastatur navigieren"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Move with the keyboard"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Moverse con el teclado"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Se déplacer au clavier"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Spostati con la tastiera"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "キーボードで移動"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Navigeren met het toetsenbord"
-          }
-        },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Mover com o teclado"
-          }
-        },
-        "ro" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Deplasează-te cu tastatura"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "使用键盘移动"
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "将一个应用拖到另一个应用上即可创建文件夹。拖到应用侧面可重新排序。右键单击可隐藏应用。"
           }
         }
       }
     },
-    "Next" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Weiter"
+    "General": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Allgemein"
           }
         },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Next"
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "General"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Siguiente"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "General"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Suivant"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Général"
           }
         },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Avanti"
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Generale"
           }
         },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "次へ"
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "一般"
           }
         },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Volgende"
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Algemeen"
           }
         },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Seguinte"
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Geral"
           }
         },
-        "ro" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Înainte"
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "General"
           }
         },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "下一步"
-          }
-        }
-      }
-    },
-    "No hidden apps" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Keine ausgeblendeten Apps"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "No hidden apps"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ninguna app oculta"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Aucune app masquée"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Nessuna app nascosta"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "非表示のアプリはありません"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Geen verborgen apps"
-          }
-        },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Nenhuma app oculta"
-          }
-        },
-        "ro" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Nicio aplicație ascunsă"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "没有已隐藏的应用"
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "通用"
           }
         }
       }
     },
-    "Open" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Öffnen"
+    "Get Info": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Informationen"
           }
         },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Open"
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Get Info"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Abrir"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Obtener información"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ouvrir"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lire les informations"
           }
         },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Apri"
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ottieni informazioni"
           }
         },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "開く"
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "情報を見る"
           }
         },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Openen"
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Toon info"
           }
         },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Abrir"
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Obter informações"
           }
         },
-        "ro" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Deschide"
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Informații"
           }
         },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "打开"
-          }
-        }
-      }
-    },
-    "Open it from anywhere" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Von überall aus öffnen"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Open it from anywhere"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ábrelo desde cualquier lugar"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ouvrez-le de n’importe où"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Aprilo da qualsiasi luogo"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "どこからでも開く"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Open het overal vandaan"
-          }
-        },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Abra-o de qualquer lugar"
-          }
-        },
-        "ro" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Deschide-l de oriunde"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "从任何地方打开"
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "显示简介"
           }
         }
       }
     },
-    "Open Trackpad Settings" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Trackpad-Einstellungen öffnen"
+    "Global shortcut": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Globaler Tastaturkurzbefehl"
           }
         },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Open Trackpad Settings"
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Global shortcut"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Abrir ajustes del Trackpad"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Atajo global"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ouvrir les réglages du Trackpad"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Raccourci global"
           }
         },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Apri impostazioni Trackpad"
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Scorciatoia globale"
           }
         },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "トラックパッド設定を開く"
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "グローバルショートカット"
           }
         },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Trackpad-instellingen openen"
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Globale sneltoets"
           }
         },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Abrir Definições do Trackpad"
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Atalho global"
           }
         },
-        "ro" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Deschide setările Trackpad"
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Comandă rapidă globală"
           }
         },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "打开触控板设置"
-          }
-        }
-      }
-    },
-    "Organize your apps" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Organisiere deine Apps"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Organize your apps"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Organiza tus apps"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Organisez vos apps"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Organizza le tue app"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "アプリを整理する"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Organiseer je apps"
-          }
-        },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Organize as suas apps"
-          }
-        },
-        "ro" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Organizează-ți aplicațiile"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "整理你的应用"
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "全局快捷键"
           }
         }
       }
     },
-    "Pinch to open and close" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Zum Öffnen und Schließen kneifen"
+    "Hidden apps": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ausgeblendete Apps"
           }
         },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Pinch to open and close"
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hidden apps"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Pellizcar para abrir y cerrar"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apps ocultas"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Pincer pour ouvrir et fermer"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apps masquées"
           }
         },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Pizzica per aprire e chiudere"
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "App nascoste"
           }
         },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "ピンチで開閉"
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "非表示のアプリ"
           }
         },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Knijpen om te openen en te sluiten"
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Verborgen apps"
           }
         },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Pinçar para abrir e fechar"
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apps ocultas"
           }
         },
-        "ro" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ciupire pentru a deschide și închide"
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aplicații ascunse"
           }
         },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "捏合打开和关闭"
-          }
-        }
-      }
-    },
-    "Pinch with your thumb and three fingers to open Launchpad, and spread them to close it. macOS handles these gestures too, so turn them off in Trackpad settings." : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Kneife mit Daumen und drei Fingern, um Launchpad zu öffnen, und spreize sie, um es zu schließen. macOS verarbeitet diese Gesten ebenfalls, daher deaktiviere sie in den Trackpad-Einstellungen."
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Pinch with your thumb and three fingers to open Launchpad, and spread them to close it. macOS handles these gestures too, so turn them off in Trackpad settings."
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Pellizca con el pulgar y tres dedos para abrir Launchpad, y sepáralos para cerrarlo. macOS también gestiona estos gestos, así que desactívalos en los ajustes del Trackpad."
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Pincez avec le pouce et trois doigts pour ouvrir Launchpad, et écartez-les pour le fermer. macOS gère aussi ces gestes, donc désactivez-les dans les réglages du Trackpad."
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Pizzica con il pollice e tre dita per aprire Launchpad e allargale per chiuderlo. macOS gestisce anche questi gesti, quindi disattivali nelle impostazioni del Trackpad."
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "親指と3本の指でピンチしてLaunchpadを開き、広げて閉じます。macOSもこれらのジェスチャを処理するため、トラックパッド設定でオフにしてください。"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Knijp met je duim en drie vingers om Launchpad te openen en spreid ze om het te sluiten. macOS verwerkt deze gebaren ook, dus schakel ze uit in de Trackpad-instellingen."
-          }
-        },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Pinçe com o polegar e três dedos para abrir o Launchpad e afaste-os para o fechar. O macOS também processa estes gestos, por isso desative-os nas definições do Trackpad."
-          }
-        },
-        "ro" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ciupiți cu degetul mare și trei degete pentru a deschide Launchpad și depărtați-le pentru a-l închide. macOS gestionează și aceste gesturi, așa că dezactivați-le din setările Trackpad."
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "用拇指和三根手指捏合以打开 Launchpad，张开以关闭。macOS 也会处理这些手势，因此请在触控板设置中关闭它们。"
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已隐藏的应用"
           }
         }
       }
     },
-    "Press keys…" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Tasten drücken…"
+    "Hide": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ausblenden"
           }
         },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Press keys…"
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hide"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Pulsa las teclas…"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ocultar"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Appuyez sur les touches…"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Masquer"
           }
         },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Premi i tasti…"
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nascondi"
           }
         },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "キーを押してください…"
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "非表示"
           }
         },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Druk op toetsen…"
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Verbergen"
           }
         },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Prima as teclas…"
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ocultar"
           }
         },
-        "ro" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Apasă tastele…"
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ascunde"
           }
         },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "按下按键…"
-          }
-        }
-      }
-    },
-    "Quit Launchpad" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Launchpad beenden"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Quit Launchpad"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Salir de Launchpad"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Quitter Launchpad"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Esci da Launchpad"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Launchpadを終了"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Launchpad afsluiten"
-          }
-        },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sair do Launchpad"
-          }
-        },
-        "ro" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Închide Launchpad"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "退出 Launchpad"
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "隐藏"
           }
         }
       }
     },
-    "Remove from Folder" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Aus Ordner entfernen"
+    "Icon size": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Symbolgröße"
           }
         },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Remove from Folder"
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Icon size"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Quitar de la carpeta"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tamaño de los iconos"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Retirer du dossier"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Taille des icônes"
           }
         },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Rimuovi dalla cartella"
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dimensione delle icone"
           }
         },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "フォルダから取り出す"
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "アイコンサイズ"
           }
         },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Verwijderen uit map"
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pictogramgrootte"
           }
         },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Remover da pasta"
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tamanho dos ícones"
           }
         },
-        "ro" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Scoate din dosar"
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dimensiunea pictogramelor"
           }
         },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "从文件夹中移出"
-          }
-        }
-      }
-    },
-    "Reset layout" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Layout zurücksetzen"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Reset layout"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Restablecer diseño"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Réinitialiser la disposition"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Reimposta layout"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "レイアウトをリセット"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Indeling resetten"
-          }
-        },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Repor disposição"
-          }
-        },
-        "ro" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Resetează aranjarea"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "重置布局"
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "图标大小"
           }
         }
       }
     },
-    "Rows" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Zeilen"
+    "Language": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sprache"
           }
         },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Rows"
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Language"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Filas"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Idioma"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Lignes"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Langue"
           }
         },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Righe"
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lingua"
           }
         },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "行"
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "言語"
           }
         },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Rijen"
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Taal"
           }
         },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Linhas"
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Idioma"
           }
         },
-        "ro" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Rânduri"
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Limbă"
           }
         },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "行"
-          }
-        }
-      }
-    },
-    "Search" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Suchen"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Search"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Buscar"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Rechercher"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Cerca"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "検索"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Zoeken"
-          }
-        },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Pesquisar"
-          }
-        },
-        "ro" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Caută"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "搜索"
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "语言"
           }
         }
       }
     },
-    "Settings" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Einstellungen"
+    "Launch at login": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Beim Anmelden öffnen"
           }
         },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Settings"
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Launch at login"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ajustes"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Abrir al iniciar sesión"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Réglages"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ouvrir à la connexion"
           }
         },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Impostazioni"
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apri all’accesso"
           }
         },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "設定"
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ログイン時に起動"
           }
         },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Instellingen"
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Starten bij inloggen"
           }
         },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Definições"
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Abrir ao iniciar sessão"
           }
         },
-        "ro" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Setări"
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pornește la autentificare"
           }
         },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "设置"
-          }
-        }
-      }
-    },
-    "Shortcut" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Kurzbefehl"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Shortcut"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Atajo"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Raccourci"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Scorciatoia"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "ショートカット"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sneltoets"
-          }
-        },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Atalho"
-          }
-        },
-        "ro" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Comandă rapidă"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "快捷键"
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "登录时启动"
           }
         }
       }
     },
-    "Shortcut & menu bar" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Kurzbefehl und Menüleiste"
+    "Launchpad keeps running in the background. Use the menu bar icon to open or quit it.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Launchpad läuft im Hintergrund weiter. Nutze das Menüleistensymbol, um es zu öffnen oder zu beenden."
           }
         },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Shortcut & menu bar"
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Launchpad keeps running in the background. Use the menu bar icon to open or quit it."
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Atajo y barra de menús"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Launchpad sigue ejecutándose en segundo plano. Usa el icono de la barra de menús para abrirlo o salir."
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Raccourci et barre des menus"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Launchpad continue de s’exécuter en arrière-plan. Utilisez l’icône de la barre des menus pour l’ouvrir ou le quitter."
           }
         },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Scorciatoia e barra dei menu"
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Launchpad continua a funzionare in background. Usa l’icona nella barra dei menu per aprirlo o chiuderlo."
           }
         },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "ショートカットとメニューバー"
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Launchpadはバックグラウンドで動作し続けます。メニューバーのアイコンを使って開いたり終了したりできます。"
           }
         },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sneltoets en menubalk"
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Launchpad blijft op de achtergrond actief. Gebruik het menubalkpictogram om het te openen of te stoppen."
           }
         },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Atalho e barra de menus"
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O Launchpad continua a ser executado em segundo plano. Utilize o ícone da barra de menus para o abrir ou sair."
           }
         },
-        "ro" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Comandă rapidă și bara de meniu"
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Launchpad rulează în continuare în fundal. Folosește pictograma din bara de meniu pentru a-l deschide sau închide."
           }
         },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "快捷键和菜单栏"
-          }
-        }
-      }
-    },
-    "Show app names" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "App-Namen anzeigen"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Show app names"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Mostrar nombres de las apps"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Afficher les noms des apps"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Mostra i nomi delle app"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "アプリ名を表示"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "App-namen tonen"
-          }
-        },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Mostrar nomes das apps"
-          }
-        },
-        "ro" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Afișează numele aplicațiilor"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "显示应用名称"
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Launchpad 会在后台继续运行。使用菜单栏图标打开或退出。"
           }
         }
       }
     },
-    "Show in Finder" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Im Finder anzeigen"
+    "Layout": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Layout"
           }
         },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Show in Finder"
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Layout"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Mostrar en el Finder"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Diseño"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Afficher dans le Finder"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Disposition"
           }
         },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Mostra nel Finder"
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Layout"
           }
         },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Finderに表示"
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "レイアウト"
           }
         },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Toon in Finder"
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Indeling"
           }
         },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Mostrar no Finder"
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Disposição"
           }
         },
-        "ro" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Arată în Finder"
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aranjare"
           }
         },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "在 Finder 中显示"
-          }
-        }
-      }
-    },
-    "Show in menu bar" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "In der Menüleiste anzeigen"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Show in menu bar"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Mostrar en la barra de menús"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Afficher dans la barre des menus"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Mostra nella barra dei menu"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "メニューバーに表示"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Tonen in de menubalk"
-          }
-        },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Mostrar na barra de menus"
-          }
-        },
-        "ro" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Afișează în bara de meniu"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "在菜单栏中显示"
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "布局"
           }
         }
       }
     },
-    "Show welcome guide" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Willkommensführung anzeigen"
+    "Move with the keyboard": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mit der Tastatur navigieren"
           }
         },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Show welcome guide"
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Move with the keyboard"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Mostrar guía de bienvenida"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Moverse con el teclado"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Afficher le guide de bienvenue"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Se déplacer au clavier"
           }
         },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Mostra guida di benvenuto"
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Spostati con la tastiera"
           }
         },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "ウェルカムガイドを表示"
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "キーボードで移動"
           }
         },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Welkomstgids tonen"
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Navigeren met het toetsenbord"
           }
         },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Mostrar guia de boas-vindas"
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mover com o teclado"
           }
         },
-        "ro" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Afișează ghidul de bun venit"
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Deplasează-te cu tastatura"
           }
         },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "显示欢迎指南"
-          }
-        }
-      }
-    },
-    "Skip" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Überspringen"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Skip"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Omitir"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ignorer"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Salta"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "スキップ"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Overslaan"
-          }
-        },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ignorar"
-          }
-        },
-        "ro" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Omite"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "跳过"
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "使用键盘移动"
           }
         }
       }
     },
-    "System default" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Systemstandard"
+    "Next": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weiter"
           }
         },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "System default"
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Next"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Predeterminado del sistema"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Siguiente"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Par défaut du système"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Suivant"
           }
         },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Predefinito di sistema"
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Avanti"
           }
         },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "システムデフォルト"
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "次へ"
           }
         },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Systeemstandaard"
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Volgende"
           }
         },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Predefinição do sistema"
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Seguinte"
           }
         },
-        "ro" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Implicit (sistem)"
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Înainte"
           }
         },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "系统默认"
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "下一步"
           }
         }
       }
     },
-    "This removes all folders and your custom order. Hidden apps stay hidden." : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Dadurch werden alle Ordner und deine eigene Reihenfolge entfernt. Ausgeblendete Apps bleiben ausgeblendet."
+    "No hidden apps": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Keine ausgeblendeten Apps"
           }
         },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "This removes all folders and your custom order. Hidden apps stay hidden."
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No hidden apps"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Esto elimina todas las carpetas y tu orden personalizado. Las apps ocultas seguirán ocultas."
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ninguna app oculta"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Cela supprime tous les dossiers et votre ordre personnalisé. Les apps masquées restent masquées."
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aucune app masquée"
           }
         },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Questo rimuove tutte le cartelle e l’ordine personalizzato. Le app nascoste restano nascoste."
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nessuna app nascosta"
           }
         },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "すべてのフォルダとカスタムの並び順が削除されます。非表示のアプリは非表示のままです。"
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "非表示のアプリはありません"
           }
         },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Dit verwijdert alle mappen en jouw aangepaste volgorde. Verborgen apps blijven verborgen."
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Geen verborgen apps"
           }
         },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Isto remove todas as pastas e a sua ordem personalizada. As apps ocultas permanecem ocultas."
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nenhuma app oculta"
           }
         },
-        "ro" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Aceasta elimină toate dosarele și ordinea personalizată. Aplicațiile ascunse rămân ascunse."
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nicio aplicație ascunsă"
           }
         },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "这将删除所有文件夹和您的自定义排序。已隐藏的应用仍保持隐藏。"
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "没有已隐藏的应用"
           }
         }
       }
     },
-    "Unhide" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Einblenden"
+    "Open": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Öffnen"
           }
         },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Unhide"
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Open"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Mostrar"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Abrir"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Afficher"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ouvrir"
           }
         },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Mostra"
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apri"
           }
         },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "再表示"
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "開く"
           }
         },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Weergeven"
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Openen"
           }
         },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Mostrar"
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Abrir"
           }
         },
-        "ro" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Arată"
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Deschide"
           }
         },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "取消隐藏"
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "打开"
           }
         }
       }
     },
-    "Use the arrow keys to move around, Return to open, and the , and . keys to flip pages. Esc closes Launchpad." : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Verwende die Pfeiltasten zum Navigieren, Return zum Öffnen sowie die Tasten , und . zum Wechseln der Seiten. Esc schließt Launchpad."
+    "Open it from anywhere": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Von überall aus öffnen"
           }
         },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Use the arrow keys to move around, Return to open, and the , and . keys to flip pages. Esc closes Launchpad."
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Open it from anywhere"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Usa las teclas de flecha para moverte, Retorno para abrir, y las teclas , y . para cambiar de página. Esc cierra Launchpad."
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ábrelo desde cualquier lugar"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Utilisez les flèches pour vous déplacer, Retour pour ouvrir, et les touches , et . pour changer de page. Échap ferme Launchpad."
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ouvrez-le de n’importe où"
           }
         },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Usa i tasti freccia per spostarti, Invio per aprire e i tasti , e . per cambiare pagina. Esc chiude Launchpad."
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aprilo da qualsiasi luogo"
           }
         },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "矢印キーで移動し、Returnで開き、, と . キーでページをめくります。EscでLaunchpadを閉じます。"
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "どこからでも開く"
           }
         },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Gebruik de pijltjestoetsen om te navigeren, Return om te openen en de toetsen , en . om van pagina te wisselen. Esc sluit Launchpad."
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Open het overal vandaan"
           }
         },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Utilize as teclas de seta para se mover, Return para abrir e as teclas , e . para mudar de página. Esc fecha o Launchpad."
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Abra-o de qualquer lugar"
           }
         },
-        "ro" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Folosește tastele săgeată pentru a te deplasa, Return pentru a deschide și tastele , și . pentru a schimba paginile. Esc închide Launchpad."
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Deschide-l de oriunde"
           }
         },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "使用方向键移动，按回车键打开，使用 , 和 . 键翻页。按 Esc 关闭 Launchpad。"
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "从任何地方打开"
           }
         }
       }
     },
-    "Version" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Version"
+    "Open Trackpad Settings": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Trackpad-Einstellungen öffnen"
           }
         },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Version"
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Open Trackpad Settings"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Versión"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Abrir ajustes del Trackpad"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Version"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ouvrir les réglages du Trackpad"
           }
         },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Versione"
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apri impostazioni Trackpad"
           }
         },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "バージョン"
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "トラックパッド設定を開く"
           }
         },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Versie"
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Trackpad-instellingen openen"
           }
         },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Versão"
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Abrir Definições do Trackpad"
           }
         },
-        "ro" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Versiune"
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Deschide setările Trackpad"
           }
         },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "版本"
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "打开触控板设置"
           }
         }
       }
     },
-    "Welcome to Launchpad" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Willkommen bei Launchpad"
+    "Organize your apps": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Organisiere deine Apps"
           }
         },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Welcome to Launchpad"
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Organize your apps"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Bienvenido a Launchpad"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Organiza tus apps"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Bienvenue dans Launchpad"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Organisez vos apps"
           }
         },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Benvenuto in Launchpad"
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Organizza le tue app"
           }
         },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Launchpadへようこそ"
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "アプリを整理する"
           }
         },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Welkom bij Launchpad"
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Organiseer je apps"
           }
         },
-        "pt" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Bem-vindo ao Launchpad"
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Organize as suas apps"
           }
         },
-        "ro" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Bine ai venit în Launchpad"
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Organizează-ți aplicațiile"
           }
         },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "欢迎使用 Launchpad"
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "整理你的应用"
+          }
+        }
+      }
+    },
+    "Pinch to open and close": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zum Öffnen und Schließen kneifen"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pinch to open and close"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pellizcar para abrir y cerrar"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pincer pour ouvrir et fermer"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pizzica per aprire e chiudere"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ピンチで開閉"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Knijpen om te openen en te sluiten"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pinçar para abrir e fechar"
+          }
+        },
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ciupire pentru a deschide și închide"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "捏合打开和关闭"
+          }
+        }
+      }
+    },
+    "Pinch with your thumb and three fingers to open Launchpad, and spread them to close it. macOS handles these gestures too, so turn them off in Trackpad settings.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kneife mit Daumen und drei Fingern, um Launchpad zu öffnen, und spreize sie, um es zu schließen. macOS verarbeitet diese Gesten ebenfalls, daher deaktiviere sie in den Trackpad-Einstellungen."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pinch with your thumb and three fingers to open Launchpad, and spread them to close it. macOS handles these gestures too, so turn them off in Trackpad settings."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pellizca con el pulgar y tres dedos para abrir Launchpad, y sepáralos para cerrarlo. macOS también gestiona estos gestos, así que desactívalos en los ajustes del Trackpad."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pincez avec le pouce et trois doigts pour ouvrir Launchpad, et écartez-les pour le fermer. macOS gère aussi ces gestes, donc désactivez-les dans les réglages du Trackpad."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pizzica con il pollice e tre dita per aprire Launchpad e allargale per chiuderlo. macOS gestisce anche questi gesti, quindi disattivali nelle impostazioni del Trackpad."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "親指と3本の指でピンチしてLaunchpadを開き、広げて閉じます。macOSもこれらのジェスチャを処理するため、トラックパッド設定でオフにしてください。"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Knijp met je duim en drie vingers om Launchpad te openen en spreid ze om het te sluiten. macOS verwerkt deze gebaren ook, dus schakel ze uit in de Trackpad-instellingen."
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pinçe com o polegar e três dedos para abrir o Launchpad e afaste-os para o fechar. O macOS também processa estes gestos, por isso desative-os nas definições do Trackpad."
+          }
+        },
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ciupiți cu degetul mare și trei degete pentru a deschide Launchpad și depărtați-le pentru a-l închide. macOS gestionează și aceste gesturi, așa că dezactivați-le din setările Trackpad."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "用拇指和三根手指捏合以打开 Launchpad，张开以关闭。macOS 也会处理这些手势，因此请在触控板设置中关闭它们。"
+          }
+        }
+      }
+    },
+    "Press keys…": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tasten drücken…"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Press keys…"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pulsa las teclas…"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Appuyez sur les touches…"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Premi i tasti…"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "キーを押してください…"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Druk op toetsen…"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Prima as teclas…"
+          }
+        },
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apasă tastele…"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "按下按键…"
+          }
+        }
+      }
+    },
+    "Quit Launchpad": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Launchpad beenden"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Quit Launchpad"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Salir de Launchpad"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Quitter Launchpad"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Esci da Launchpad"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Launchpadを終了"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Launchpad afsluiten"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sair do Launchpad"
+          }
+        },
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Închide Launchpad"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "退出 Launchpad"
+          }
+        }
+      },
+      "extractionState": "manual"
+    },
+    "Remove from Folder": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aus Ordner entfernen"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Remove from Folder"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Quitar de la carpeta"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Retirer du dossier"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rimuovi dalla cartella"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "フォルダから取り出す"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Verwijderen uit map"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Remover da pasta"
+          }
+        },
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Scoate din dosar"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "从文件夹中移出"
+          }
+        }
+      }
+    },
+    "Reset layout": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Layout zurücksetzen"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Reset layout"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Restablecer diseño"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Réinitialiser la disposition"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Reimposta layout"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "レイアウトをリセット"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Indeling resetten"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Repor disposição"
+          }
+        },
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Resetează aranjarea"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "重置布局"
+          }
+        }
+      }
+    },
+    "Rows": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zeilen"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rows"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Filas"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lignes"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Righe"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "行"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rijen"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Linhas"
+          }
+        },
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rânduri"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "行"
+          }
+        }
+      }
+    },
+    "Search": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Suchen"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Search"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Buscar"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rechercher"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cerca"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "検索"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zoeken"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pesquisar"
+          }
+        },
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Caută"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "搜索"
+          }
+        }
+      }
+    },
+    "Settings": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Einstellungen"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Settings"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ajustes"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Réglages"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Impostazioni"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "設定"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Instellingen"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Definições"
+          }
+        },
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Setări"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "设置"
+          }
+        }
+      }
+    },
+    "Shortcut": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kurzbefehl"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Shortcut"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Atajo"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Raccourci"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Scorciatoia"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ショートカット"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sneltoets"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Atalho"
+          }
+        },
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Comandă rapidă"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "快捷键"
+          }
+        }
+      }
+    },
+    "Shortcut & menu bar": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kurzbefehl und Menüleiste"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Shortcut & menu bar"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Atajo y barra de menús"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Raccourci et barre des menus"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Scorciatoia e barra dei menu"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ショートカットとメニューバー"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sneltoets en menubalk"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Atalho e barra de menus"
+          }
+        },
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Comandă rapidă și bara de meniu"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "快捷键和菜单栏"
+          }
+        }
+      }
+    },
+    "Show app names": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "App-Namen anzeigen"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Show app names"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mostrar nombres de las apps"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Afficher les noms des apps"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mostra i nomi delle app"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "アプリ名を表示"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "App-namen tonen"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mostrar nomes das apps"
+          }
+        },
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Afișează numele aplicațiilor"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "显示应用名称"
+          }
+        }
+      }
+    },
+    "Show in Finder": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Im Finder anzeigen"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Show in Finder"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mostrar en el Finder"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Afficher dans le Finder"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mostra nel Finder"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Finderに表示"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Toon in Finder"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mostrar no Finder"
+          }
+        },
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Arată în Finder"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在 Finder 中显示"
+          }
+        }
+      }
+    },
+    "Show in menu bar": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "In der Menüleiste anzeigen"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Show in menu bar"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mostrar en la barra de menús"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Afficher dans la barre des menus"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mostra nella barra dei menu"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "メニューバーに表示"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tonen in de menubalk"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mostrar na barra de menus"
+          }
+        },
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Afișează în bara de meniu"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在菜单栏中显示"
+          }
+        }
+      }
+    },
+    "Show welcome guide": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Willkommensführung anzeigen"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Show welcome guide"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mostrar guía de bienvenida"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Afficher le guide de bienvenue"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mostra guida di benvenuto"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ウェルカムガイドを表示"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Welkomstgids tonen"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mostrar guia de boas-vindas"
+          }
+        },
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Afișează ghidul de bun venit"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "显示欢迎指南"
+          }
+        }
+      }
+    },
+    "Skip": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Überspringen"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Skip"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Omitir"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ignorer"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Salta"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "スキップ"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Overslaan"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ignorar"
+          }
+        },
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Omite"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "跳过"
+          }
+        }
+      }
+    },
+    "System default": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Systemstandard"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "System default"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Predeterminado del sistema"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Par défaut du système"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Predefinito di sistema"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "システムデフォルト"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Systeemstandaard"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Predefinição do sistema"
+          }
+        },
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Implicit (sistem)"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "系统默认"
+          }
+        }
+      }
+    },
+    "This removes all folders and your custom order. Hidden apps stay hidden.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dadurch werden alle Ordner und deine eigene Reihenfolge entfernt. Ausgeblendete Apps bleiben ausgeblendet."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "This removes all folders and your custom order. Hidden apps stay hidden."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Esto elimina todas las carpetas y tu orden personalizado. Las apps ocultas seguirán ocultas."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cela supprime tous les dossiers et votre ordre personnalisé. Les apps masquées restent masquées."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Questo rimuove tutte le cartelle e l’ordine personalizzato. Le app nascoste restano nascoste."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "すべてのフォルダとカスタムの並び順が削除されます。非表示のアプリは非表示のままです。"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dit verwijdert alle mappen en jouw aangepaste volgorde. Verborgen apps blijven verborgen."
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Isto remove todas as pastas e a sua ordem personalizada. As apps ocultas permanecem ocultas."
+          }
+        },
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aceasta elimină toate dosarele și ordinea personalizată. Aplicațiile ascunse rămân ascunse."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "这将删除所有文件夹和您的自定义排序。已隐藏的应用仍保持隐藏。"
+          }
+        }
+      }
+    },
+    "Unhide": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Einblenden"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Unhide"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mostrar"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Afficher"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mostra"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "再表示"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weergeven"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mostrar"
+          }
+        },
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Arată"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "取消隐藏"
+          }
+        }
+      }
+    },
+    "Use the arrow keys to move around, Return to open, and the , and . keys to flip pages. Esc closes Launchpad.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Verwende die Pfeiltasten zum Navigieren, Return zum Öffnen sowie die Tasten , und . zum Wechseln der Seiten. Esc schließt Launchpad."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Use the arrow keys to move around, Return to open, and the , and . keys to flip pages. Esc closes Launchpad."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Usa las teclas de flecha para moverte, Retorno para abrir, y las teclas , y . para cambiar de página. Esc cierra Launchpad."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Utilisez les flèches pour vous déplacer, Retour pour ouvrir, et les touches , et . pour changer de page. Échap ferme Launchpad."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Usa i tasti freccia per spostarti, Invio per aprire e i tasti , e . per cambiare pagina. Esc chiude Launchpad."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "矢印キーで移動し、Returnで開き、, と . キーでページをめくります。EscでLaunchpadを閉じます。"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gebruik de pijltjestoetsen om te navigeren, Return om te openen en de toetsen , en . om van pagina te wisselen. Esc sluit Launchpad."
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Utilize as teclas de seta para se mover, Return para abrir e as teclas , e . para mudar de página. Esc fecha o Launchpad."
+          }
+        },
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Folosește tastele săgeată pentru a te deplasa, Return pentru a deschide și tastele , și . pentru a schimba paginile. Esc închide Launchpad."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "使用方向键移动，按回车键打开，使用 , 和 . 键翻页。按 Esc 关闭 Launchpad。"
+          }
+        }
+      }
+    },
+    "Version": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Version"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Version"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Versión"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Version"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Versione"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "バージョン"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Versie"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Versão"
+          }
+        },
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Versiune"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "版本"
+          }
+        }
+      }
+    },
+    "Welcome to Launchpad": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Willkommen bei Launchpad"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Welcome to Launchpad"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bienvenido a Launchpad"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bienvenue dans Launchpad"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Benvenuto in Launchpad"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Launchpadへようこそ"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Welkom bij Launchpad"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bem-vindo ao Launchpad"
+          }
+        },
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bine ai venit în Launchpad"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "欢迎使用 Launchpad"
+          }
+        }
+      }
+    },
+    "Folder": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Folder"
+          }
+        },
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dosar"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Carpeta"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dossier"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ordner"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cartella"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Map"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pasta"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "フォルダ"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "文件夹"
+          }
+        }
+      }
+    },
+    "Open Launchpad": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Open Launchpad"
+          }
+        },
+        "ro": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Deschide Launchpad"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Abrir Launchpad"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ouvrir Launchpad"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Launchpad öffnen"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apri Launchpad"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Launchpad openen"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Abrir Launchpad"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Launchpadを開く"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "打开 Launchpad"
           }
         }
       }
     }
   },
-  "version" : "1.0"
+  "version": "1.0"
 }

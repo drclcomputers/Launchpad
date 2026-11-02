@@ -21,6 +21,8 @@ enum Keys {
 	static let layout = "layout.v1"
 	static let hidden = "hiddenApps.v1"
 	static let menuBar = "menuBar"
+	static let launchAtLogin = "launchAtLogin"
+	static let lastSession = "lastSession"
 	static let launchCounts = "launchCounts.v1"
 	static let dim = "backgroundDim"
 	static let onboarded = "onboarded"
@@ -89,6 +91,7 @@ enum LaunchAtLogin {
 	static var isEnabled: Bool { SMAppService.mainApp.status == .enabled }
 
 	static func set(_ enabled: Bool) {
+		UserDefaults.standard.set(enabled, forKey: Keys.launchAtLogin)
 		guard enabled != isEnabled else { return }
 		do {
 			if enabled { try SMAppService.mainApp.register() }
