@@ -68,11 +68,26 @@ Apple removed Launchpad from recent versions of macOS in favor of the Apps view 
 
 ## Installation
 
-### Download
+### via Homebrew
+
+```bash
+brew tap drclcomputers/tap
+brew install --cask launchpad
+```
+
+Or in a single command:
+
+```bash
+brew install --cask drclcomputers/tap/launchpad
+```
+
+The cask also clears macOS's quarantine flag, so you don't need to do anything extra on first launch. To update later, run `brew upgrade --cask launchpad`.
+
+### OR
 
 Grab the latest build from the [Releases](https://github.com/drclcomputers/Launchpad/releases) page, unzip it, and drag **Launchpad.app** into your `/Applications` folder.
 
-> Builds are not signed or notarized (that needs a paid Apple Developer account), so macOS blocks the first launch. Right-click the app and choose **Open**, or run `xattr -cr /Applications/Launchpad.app` once.
+> Builds are not signed or notarized (that needs a paid Apple Developer account), so macOS blocks the first launch. Open **System Settings → Privacy & Security** and click **Open Anyway**, or run `xattr -cr /Applications/Launchpad.app` once.
 
 ### Build from source
 
